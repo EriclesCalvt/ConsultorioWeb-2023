@@ -10,7 +10,7 @@ body {
   justify-content: space-between;
   align-self: center;
 }
-.crud-SERV {
+.crud-PAC {
   display: flex;
   justify-content: center;
   min-height: 30vh;
@@ -64,9 +64,6 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   padding-left: 1vw;
-}
-.crud-SERV {
-  display: flex;
 }
 .table {
   display: flex;

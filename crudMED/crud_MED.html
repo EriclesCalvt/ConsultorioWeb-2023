@@ -71,7 +71,7 @@
       <div class="div-Conteiner">
         <div id="Container">
           <div class="selectt">
-            <select id="select" onclick="valorSERV(this.value)">
+            <select id="select" onclick="valorMED(this.value)">
               <option value=""></option>
               <option value="Médicos">Médicos</option>
               <option value="Pacientes">Pacientes</option>
@@ -80,14 +80,15 @@
           </div>
           <button type="submit" id="btn_ADICIONAR">+ ADICIONAR</button>
       </div>
-        <div class="crud-SERV">
+        <div class="crud-MED">
           <div>
             <table class="table">
               <tr id="mains-tr">
+                <td>CPF</td>
                 <td>NOME</td>
-                <td>HORARIOS</td>
-                <td>DATA</td>
-                <td>NOME DO PACIENTE</td>
+                <td>DATA NASCIMENTO</td>
+                <td>ESPECIALIDADES</td>
+                <td>CRM</td>
                 <td>AÇÃO</td>
                 <td>AÇÃO</td>
               </tr>
@@ -96,13 +97,6 @@
                 <td class="td-main"><input type="text"></td>
                 <td class="td-main"><input type="date"></td>
                 <td class="td-main"><input type="text"></td>
-                <td class="td-main"><a href="#">ATUALIZAR</td>
-                <td class="td-main"><a href="#">EXCLUIR</a></td>
-              </tr>
-              <tr>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="date"></td>
                 <td class="td-main"><input type="text"></td>
                 <td class="td-main"><a href="#">ATUALIZAR</td>
                 <td class="td-main"><a href="#">EXCLUIR</a></td>
@@ -112,6 +106,7 @@
                 <td class="td-main"><input type="text"></td>
                 <td class="td-main"><input type="date"></td>
                 <td class="td-main"><input type="text"></td>
+                <td class="td-main"><input type="text"></td>
                 <td class="td-main"><a href="#">ATUALIZAR</td>
                 <td class="td-main"><a href="#">EXCLUIR</a></td>
               </tr>
@@ -119,6 +114,16 @@
                 <td class="td-main"><input type="text"></td>
                 <td class="td-main"><input type="text"></td>
                 <td class="td-main"><input type="date"></td>
+                <td class="td-main"><input type="text"></td>
+                <td class="td-main"><input type="text"></td>
+                <td class="td-main"><a href="#">ATUALIZAR</td>
+                <td class="td-main"><a href="#">EXCLUIR</a></td>
+              </tr>
+              <tr>
+                <td class="td-main"><input type="text"></td>
+                <td class="td-main"><input type="text"></td>
+                <td class="td-main"><input type="date"></td>
+                <td class="td-main"><input type="text"></td>
                 <td class="td-main"><input type="text"></td>
                 <td class="td-main"><a href="#">ATUALIZAR</td>
                 <td class="td-main"><a href="#">EXCLUIR</a></td>
@@ -169,6 +174,6 @@
         </div>
       </div>
     </footer>
-    <script src="script_SERV.js"></script>
+    <script src="script_MED.js"></script>
   </body>
 </html>
