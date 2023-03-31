@@ -48,6 +48,9 @@ body {
 .buttons h2 {
   padding-bottom: 40px;
 }
+.buttons span {
+  font-size: 70px;
+}
 .buttons button {
   height: 20vh;
   width: 12vw;

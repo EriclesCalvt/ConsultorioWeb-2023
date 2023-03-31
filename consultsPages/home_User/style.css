@@ -24,6 +24,9 @@ body {
 .buttons {
   flex-direction: column;
 }
+.buttons span {
+  font-size: 70px;
+}
 .buttons h2 {
   padding-bottom: 40px;
 }
