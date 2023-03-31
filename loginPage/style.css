@@ -3,12 +3,29 @@
   margin: 0px;
 }
 body {
+  width: 100%;
   background-color: #edf8f7;
 }
+.movimentacao {
+  display: flex;
+  flex-direction: column;
+  width: 8vw;
+  gap: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 100%;
+  margin-top: 20px;
+}
+.abrirMenu {
+  width: 150px;
+  background-color: #629fb6;
+}
 #Container {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 100px;
 }
 #Formulario {
@@ -68,6 +85,13 @@ input[type="password"] {
 }
 #header h5 {
   font-family: "Bebas Neue", cursive;
+}
+
+nav {
+  display: none;
+}
+nav a {
+  text-decoration: none;
 }
 .main-container {
   perspective: 700px;
@@ -147,6 +171,7 @@ input[type="password"] {
   margin-right: 30px;
   gap: 10px;
   cursor: pointer;
+  position: relative;
 }
 .filha {
   border-radius: 30px;
