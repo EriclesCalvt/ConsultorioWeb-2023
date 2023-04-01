@@ -11,11 +11,11 @@ body {
   justify-content: center;
   gap: 2%;
   padding-top: 100px;
-
 }
 .trajeto {
   border-right: 2px solid black;
   width: 300px;
+  font-family: "League Spartan", sans-serif;
 }
 .traco {
   font-size: 50px;
@@ -24,6 +24,7 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
+  font-family: "League Spartan", sans-serif;
 }
 .form h2 {
   padding-bottom: 50px;

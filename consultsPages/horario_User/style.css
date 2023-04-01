@@ -4,6 +4,7 @@
 }
 body {
   background-color: #edf8f7;
+  font-family: "League Spartan", sans-serif;
 }
 #Container {
   display: flex;
@@ -151,6 +152,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  font-family: "League Spartan", sans-serif;
 }
 .horas button {
   height: 10vh;
@@ -160,6 +162,7 @@ body {
   color: white;
   border: 1px solid #629fb6;
   cursor: pointer;
+  font-family: "League Spartan", sans-serif;
 }
 .boxs button {
   background-color: #629fb6;

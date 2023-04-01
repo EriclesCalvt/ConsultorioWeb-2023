@@ -20,6 +20,7 @@ body {
 .trajeto {
   border-right: 2px solid black;
   width: 300px;
+  font-family: "League Spartan", sans-serif;
 }
 .buttons {
   flex-direction: column;
@@ -29,6 +30,7 @@ body {
 }
 .buttons h2 {
   padding-bottom: 40px;
+  font-family: "League Spartan", sans-serif;
 }
 .buttons button {
   height: 20vh;

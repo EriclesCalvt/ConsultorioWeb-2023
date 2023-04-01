@@ -4,6 +4,7 @@
 }
 body {
   background-color: #edf8f7;
+  font-family: "League Spartan", sans-serif;
 }
 #Container {
   display: flex;
@@ -11,16 +12,19 @@ body {
   flex-direction: column;
   gap: 2%;
   padding-top: 100px;
+  font-family: "League Spartan", sans-serif;
 }
 .texto-box {
   display: flex;
   justify-content: center;
+  font-family: "League Spartan", sans-serif;
 }
 .Main-box {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   gap: 3vw;
+  font-family: "League Spartan", sans-serif;
 }
 .box-1 {
   display: flex;

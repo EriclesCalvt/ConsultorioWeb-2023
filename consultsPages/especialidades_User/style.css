@@ -10,6 +10,7 @@ body {
   flex: 1;
   justify-content: space-around;
   padding-top: 100px;
+  font-family: "League Spartan", sans-serif;
 }
 #agendar img {
   position: absolute;
