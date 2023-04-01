@@ -39,28 +39,23 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
-      href="../../../assets/Mais Brasil Logo.png"
+      href="../../assets/Mais Brasil Logo.png"
       type="image/png"
     />
   </head>
   <body>
     <div id="header">
       <div class="logo">
-        <img src="../../../assets/Mais Brasil Logo.png" alt="" />
+        <img src="../../assets/Mais Brasil Logo.png" alt="" />
         <div id="text">
           <!-- LEAGUE SPARTAN -->
           <h1>Centro Médico</h1>
           <h5>ESPECIALIDADES</h5>
         </div>
       </div>
-      <a href="../../loginPage/Login.html"></a>
+      <a href="../loginPage/Login.html"></a>
       <div class="btn_marcar">
-        <div class="btn_marcarConsulta">
-          <button onclick="url()" id="btn_Consult">
-            MARQUE SUA<br />
-            CONSULTA
-          </button>
-        </div>
+        <div class="btn_marcarConsulta"></div>
       </div>
       <div class="pai" onclick="menu()">
         <div class="filha"></div>
@@ -70,31 +65,12 @@
     </div>
 
     <div id="Container">
-      <div class="trajeto">
-        <div id="agendar">
-          <p>Agendar consulta</p>
-          <br /><br />
-          <p>Dados do paciente</p>
-          <br /><br />
-          <p>Especialidade</p>
-          <br /><br />
-          <p>profissional</p>
-          <br /><br />
-          <p>horario</p>
-          <br /><br />
-          <p>Confirmação</p>
-          <br /><br />
-        </div>
-      </div>
-
       <div class="form">
         <form>
-          <h2>DADOS DO PACIENTE:</h2>
+          <h2>ATUALIZAR DADOS:</h2>
           <div>
             <div>
-              <label for=""
-                >Nivel de relacionamento com o dono(a) desta conta:</label
-              ><br />
+              <label for="">Selecionar paciente:</label><br />
               <select name="" id="" style="margin-top: 13px">
                 <option value=""></option>
                 <option value="">Muito</option>
@@ -116,7 +92,9 @@
                 </div>
                 <div>
                   <label for="">Sexo:</label>
-                  <input type="text" />
+                  <select name="" id="" style="width: 10vw">
+                    <option value=""></option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -135,13 +113,18 @@
               <input type="text" /><br />
             </div>
           </div>
-          <input type="submit" name="AVANÇAR" id="urlRote_2" value="AVANÇAR" />
+          <input
+            type="submit"
+            name="AVANÇAR"
+            id="urlRote_2"
+            value="ATUALIZAR"
+          />
         </form>
       </div>
     </div>
 
     <footer>
-      <img src="../../../assets/Mais Brasil Logo.png" alt="" />
+      <img src="../../assets/Mais Brasil Logo.png" alt="" />
       <div class="feet">
         <div class="txt1">
           <h1>INICIO</h1>
@@ -164,26 +147,22 @@
         </div>
         <div class="btn_contact">
           <div class="contact">
+            <img src="../../assets/Whatsapp_logo.png" id="Whatsapp" alt="" /><a
+              href="#"
+            ></a>
             <img
-              src="../../../assets/Whatsapp_logo.png"
-              id="Whatsapp"
-              alt=""
-            /><a href="#"></a>
-            <img
-              src="../../../assets/Instagram_logo.png"
+              src="../../assets/Instagram_logo.png"
               id="Instagram"
               alt=""
             /><a href="#"></a>
-            <img
-              src="../../../assets/facebook_logo.png"
-              id="Facebook"
-              alt=""
-            /><a href="#"></a>
+            <img src="../../assets/facebook_logo.png" id="Facebook" alt="" /><a
+              href="#"
+            ></a>
           </div>
           <button>Contato</button>
         </div>
       </div>
     </footer>
-    <script src="script_dados.js"></script>
+    <script src="script_Settings.js"></script>
   </body>
 </html>

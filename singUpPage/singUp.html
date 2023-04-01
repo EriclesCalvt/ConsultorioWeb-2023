@@ -39,14 +39,14 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
-      href="../../../assets/Mais Brasil Logo.png"
+      href="../../assets/Mais Brasil Logo.png"
       type="image/png"
     />
   </head>
   <body>
     <div id="header">
       <div class="logo">
-        <img src="../../../assets/Mais Brasil Logo.png" alt="" />
+        <img src="../../assets/Mais Brasil Logo.png" alt="" />
 
         <div id="text">
           <!-- LEAGUE SPARTAN -->
@@ -54,16 +54,15 @@
           <h5>ESPECIALIDADES</h5>
         </div>
       </div>
-      <a href="../../loginPage/Login.html"></a>
       <div class="btn_marcar">
         <div class="btn_marcarConsulta">
-          <button onclick="url()" id="btn_Consult">
-            MARQUE SUA<br />
+          <button id="btn_Consult">
+            MARQUE SUA <br />
             CONSULTA
           </button>
         </div>
       </div>
-      <div class="pai" onclick="menu()">
+      <div class="pai" onclick="abrirMenu()">
         <div class="filha"></div>
         <div class="filha"></div>
         <div class="filha"></div>
@@ -71,50 +70,41 @@
     </div>
 
     <div id="Container">
-      <div class="trajeto">
-        <div id="agendar">
-          <p>Agendar consulta</p>
-          <br /><br />
-          <p>Dados do paciente</p>
-          <br /><br />
-          <p>Especialidade</p>
-          <br /><br />
-          <p>profissional</p>
-          <br /><br />
-          <p>horario</p>
-          <br /><br />
-          <p>Confirmação</p>
-          <br /><br />
+      <form id="Formulario">
+        <!-- LEAGUE SPARTAN -->
+        <h2 id="login">FAÇA SEU CADASTRO:</h2>
+        <div class="icons">
+          <span class="material-symbols-outlined"> person </span>
+          <input type="email" name="email" id="email" placeholder="E-Mail:" />
         </div>
-      </div>
-      <div class="buttons">
-        <h2>SELECIONE A ESPECIALIDADE:</h2>
-        <div class="main_btn">
-          <div>          
-            <button class="especialitys" onclick="especialitys()">ALERGOLOGIA</button>
-            <button class="especialitys" onclick="especialitys()">CARDIOLOGIA</button>
-            <button class="especialitys" onclick="especialitys()">CLINICO GERAL</button>
-            <button class="especialitys" onclick="especialitys()">GASTROENTEROLOGISTA</button>
-          </div>
-          <div>
-            <button class="especialitys" onclick="especialitys()">GINECOLOGISTA</button>
-            <button class="especialitys" onclick="especialitys()">DERMATOLOGISTA</button>
-            <button class="especialitys" onclick="especialitys()">NEUROCIRURGIA</button>
-            <button class="especialitys" onclick="especialitys()">OFTAMOLOGIA</button>
-          </div>
-          <div>
-            <button class="especialitys" onclick="especialitys()">ORTOPEDIA</button>
-            <button class="especialitys" onclick="especialitys()">PEDIATRIA</button>
-            <button class="especialitys" onclick="especialitys()">PSIQUIATRIA</button>
-            <button class="especialitys" onclick="especialitys()">UROLOGIA</button>
-          </div>
+        <div class="icons">
+          <span class="material-symbols-outlined"> lock </span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Senha:"
+          />
         </div>
-      </div>
-      </div>
+        <div class="icons">
+          <span class="material-symbols-outlined"> lock </span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Confirme sua senha:"
+          />
+        </div>
+        <input type="submit" name="btn" id="btn" value="CADASTRAR" />
+      </form>
     </div>
 
+    <div id="imagem"></div>
+
+    <script src="scripts_singUp.js"></script>
+    <!-- test -->
     <footer>
-      <img src="../../../assets/Mais Brasil Logo.png" alt="" />
+      <img src="../../assets/Mais Brasil Logo.png" alt="" />
       <div class="feet">
         <div class="txt1">
           <h1>INICIO</h1>
@@ -137,26 +127,21 @@
         </div>
         <div class="btn_contact">
           <div class="contact">
+            <img src="../../assets/Whatsapp_logo.png" id="Whatsapp" alt="" /><a
+              href="#"
+            ></a>
             <img
-              src="../../../assets/Whatsapp_logo.png"
-              id="Whatsapp"
-              alt=""
-            /><a href="#"></a>
-            <img
-              src="../../../assets/Instagram_logo.png"
+              src="../../assets/Instagram_logo.png"
               id="Instagram"
               alt=""
             /><a href="#"></a>
-            <img
-              src="../../../assets/facebook_logo.png"
-              id="Facebook"
-              alt=""
-            /><a href="#"></a>
+            <img src="../../assets/facebook_logo.png" id="Facebook" alt="" /><a
+              href="#"
+            ></a>
           </div>
           <button>Contato</button>
         </div>
       </div>
     </footer>
-    <script src="script_especialidade.js"></script>
   </body>
 </html>

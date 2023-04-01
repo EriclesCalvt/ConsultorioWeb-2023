@@ -1,10 +1,16 @@
 const url$ = document.getElementById("btn_Consult");
-const urlRote$ = document.getElementById("urlRote");
+const buttons$ = document.getElementsByClassName("especialitys");
 
 url$.addEventListener("click", () => {
   window.location.href = "../../loginPage/Login.html";
 });
 
-urlRote$.addEventListener("click", () => {
-  window.location.href = "../dados_User/dados_User.html";
-});
+// document
+//   .getElementsByClassName("especialitys")
+//   .addEventListener("click", () => {
+//     window.location.href = "../professional_User/professional_User.html";
+//   });
+
+function especialitys() {
+  window.location.href = "../professional_User/professional_User.html";
+}

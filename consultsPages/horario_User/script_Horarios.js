@@ -17,3 +17,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
   window.location.href = "../especialidades_User/especialidades.html";
 });
+
+function confirmation() {
+  window.location.href = "../confirmation_User/confirmation.html";
+}

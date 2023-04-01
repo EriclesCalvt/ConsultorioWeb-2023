@@ -1,0 +1,263 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  width: 100%;
+  background-color: #edf8f7;
+}
+.movimentacao {
+  display: flex;
+  flex-direction: column;
+  width: 8vw;
+  gap: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 100%;
+  margin-top: 20px;
+}
+.abrirMenu {
+  width: 150px;
+  background-color: #629fb6;
+}
+#Container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding-top: 100px;
+}
+#Formulario {
+  height: 330px;
+  background-color: white;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  /*não quebra linha*/
+  white-space: nowrap;
+  border-radius: 30px;
+  flex: 0;
+}
+form#Formulario {
+  box-shadow: 10px 5px 15px rgb(209, 209, 209);
+  height: 45vh;
+}
+#Formulario h2 {
+  margin-bottom: 40px;
+  color: #21506b;
+  font-family: "League Spartan", sans-serif;
+}
+#Formulario input[type="email"],
+input[type="password"] {
+  padding: 10px 5px;
+  border: none;
+  height: 4vh;
+  width: 11vw;
+  background-color: #edf8f7;
+  border-radius: 50px;
+  outline: 0;
+}
+#Formulario input[type="submit"] {
+  margin-top: 25px;
+  border: none;
+  border-radius: 50px;
+  background-color: #629fb6;
+  cursor: pointer;
+  padding: 25px;
+  width: 11vw;
+  font-size: 25px;
+  font-family: "League Spartan", sans-serif;
+  color: white;
+}
+#header {
+  background-color: white;
+  font-family: "Noto Serif Ahom", serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 10px 1px 15px rgb(105, 104, 104);
+}
+#header h1 {
+  font-family: "League Spartan", sans-serif;
+}
+#header h5 {
+  font-family: "Bebas Neue", cursive;
+}
+
+nav {
+  display: none;
+}
+nav a {
+  text-decoration: none;
+}
+.main-container {
+  perspective: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Formulario {
+  position: relative;
+  transition: 0.8s ease-in;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.face-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.face-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Formulario a {
+  color: #629fb6;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.icons {
+  color: #073c3d;
+  background-color: #edf8f7;
+  margin-bottom: 40px;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+#header img {
+  height: 120px;
+}
+#header button {
+  margin-left: 600px;
+}
+.logo h1 {
+  margin-top: 28px;
+  font-size: 45px;
+  color: #21506b;
+}
+.logo {
+  padding: 0px;
+  display: flex;
+}
+#text {
+  display: flex;
+  flex-direction: column;
+}
+#text h5 {
+  margin-left: 10px;
+  letter-spacing: 9px;
+  font-size: 15px;
+}
+.pai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 3px solid #629fb6;
+  margin-right: 30px;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.filha {
+  border-radius: 30px;
+  width: 65%;
+  height: 10%;
+  background-color: #629fb6;
+}
+footer {
+  padding-bottom: 200px;
+  display: flex;
+  margin-top: 100px;
+  min-height: 200px;
+  min-width: 200px;
+  background-color: #21506b;
+}
+footer img {
+  height: 25vh;
+}
+.feet {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 50px;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  list-style: none;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#Whatsapp {
+  cursor: pointer;
+}
+#Instagram {
+  cursor: pointer;
+}
+#Facebook {
+  cursor: pointer;
+}
+.contact img {
+  gap: 10px;
+  height: 80px;
+  color: white;
+  filter: contrast(0%) brightness(200%);
+}
+.btn_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 30%;
+}
+.btn_contact button {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: #629fb6;
+  color: white;
+  border: 1px solid #629fb6;
+  border-radius: 50px;
+  padding: 15px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  height: 8vh;
+  width: 20vw;
+  cursor: pointer;
+}
+li {
+  cursor: pointer;
+}
+.btn_marcarConsulta button {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: #629fb6;
+  color: white;
+  border: 1px solid #629fb6;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+  cursor: pointer;
+  margin-left: 500px;
+}
