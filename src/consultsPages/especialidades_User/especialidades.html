@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- ICONES: -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-
     <!-- FONTES -->
     <!-- LEAGUE SPARTAN -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,7 +56,12 @@
       </div>
       <a href="../../loginPage/Login.html"></a>
       <div class="btn_marcar">
-        <div class="btn_marcarConsulta"></div>
+        <div class="btn_marcarConsulta">
+          <button onclick="url()" id="btn_Consult">
+            MARQUE SUA<br />
+            CONSULTA
+          </button>
+        </div>
       </div>
       <div class="pai" onclick="menu()">
         <div class="filha"></div>
@@ -88,40 +87,29 @@
           <br /><br />
         </div>
       </div>
-      <div class="main-all">
-        <h2>CONFIRMAR DADOS:</h2>
-        <div class="especialidades">
-          <div class="main-box">
-            <h3>AGENDAMENTO:</h3>
-            <div>
-              <div class="sub-box">
-                <label for="">Data:</label>
-                <p>dd/mm/aaaa</p>
-                <label for="">Profissional:</label>
-                <p>.....</p>
-                <label for=""></label>
-                <h3>PACIENTE:</h3>
-                <label for="">Nome:</label>
-                <p>Fulano de tal</p>
-                <label for="">RG:</label>
-                <p>********</p>
-              </div>
-            </div>
+      <div class="buttons">
+        <h2>SELECIONE A ESPECIALIDADE:</h2>
+        <div class="main_btn">
+          <div>          
+            <button class="especialitys" onclick="especialitys()" value="ALERGOLOGIA">ALERGOLOGIA</button>
+            <button class="especialitys" onclick="especialitys()" value="CARDIOLOGIA">CARDIOLOGIA</button>
+            <button class="especialitys" onclick="especialitys()" value="CLINICO GERAL">CLINICO GERAL</button>
+            <button class="especialitys" onclick="especialitys()" value="GASTROENTEROLOGISTA">GASTROENTEROLOGISTA</button>
           </div>
-
-          <div class="sub-box">
-            <label for="">Horario:</label>
-            <p>00:00</p>
-            <label for="">Especialidade:</label>
-            <p>odontologia</p>
-            <label for="">CPF:</label>
-            <p>000.000.000-000</p>
-            <label for="">Data de nascimento:</label>
-            dd/mm/aaaa
+          <div>
+            <button class="especialitys" onclick="especialitys()" value="GINECOLOGISTA">GINECOLOGISTA</button>
+            <button class="especialitys" onclick="especialitys()" value="DERMATOLOGISTA">DERMATOLOGISTA</button>
+            <button class="especialitys" onclick="especialitys()" value="NEUROCIRURGIA">NEUROCIRURGIA</button>
+            <button class="especialitys" onclick="especialitys()" value="OFTAMOLOGIA">OFTAMOLOGIA</button>
           </div>
-
-          <button>Agendar</button>
+          <div>
+            <button class="especialitys" onclick="especialitys()" value="ORTOPEDIA">ORTOPEDIA</button>
+            <button class="especialitys" onclick="especialitys()" value="PEDIATRIA">PEDIATRIA</button>
+            <button class="especialitys" onclick="especialitys()" value="PSIQUIATRIA">PSIQUIATRIA</button>
+            <button class="especialitys" onclick="especialitys()" value="UROLOGIA">UROLOGIA</button>
+          </div>
         </div>
+      </div>
       </div>
     </div>
 
@@ -169,6 +157,6 @@
         </div>
       </div>
     </footer>
-    <script src="script_Confirmation.js"></script>
+    <script src="script_especialidade.js"></script>
   </body>
 </html>

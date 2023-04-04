@@ -22,13 +22,63 @@ body {
 }
 .especialidades {
   display: flex;
-  flex-direction: column;
+  flex-direction: column ;
   gap: 50px;
 }
-#button_especialidade {
+.container-especialidades{
+  display: flex;
+  gap: 20px;
+}
+.div-main-especialidades{
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.div-main-especialidades button{
+  border-radius: 20px;
+  background-color: #629fb6;
+  color: white;
+  font-weight: 800;
+  height: 5vh;
+  width: 1vw;
+  border: none;
+}
+.container-especialidades-agendamento h2{
+  /*    */
+}
+.container-especialidades-agendamento{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.p-agendamento{
+  display: flex;
+  flex-direction: column;
+}
+.agendamento-1{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.agendamento-2{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.agendamento-3{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.agendamento-4{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+#button-especialidades{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 #button_especialidade button {
   height: 8vh;
