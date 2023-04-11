@@ -1,5 +1,4 @@
 let select = document.querySelector("#select");
-
 const selectValue = document.getElementById("select");
 console.log(selectValue.value);
 

@@ -27,11 +27,13 @@ body {
 }
 .container-especialidades{
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 50px;
 }
 .div-main-especialidades{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 30px;
 }
 .div-main-especialidades button{
@@ -49,6 +51,8 @@ body {
 .container-especialidades-agendamento{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-width: 30vw;
   gap: 30px;
 }
 .p-agendamento{
@@ -58,21 +62,25 @@ body {
 .agendamento-1{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 50px;
 }
 .agendamento-2{
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  justify-content: space-between;
+  gap: 60px;
 }
 .agendamento-3{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 50px;
 }
 .agendamento-4{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 50px;
 }
 #button-especialidades{
