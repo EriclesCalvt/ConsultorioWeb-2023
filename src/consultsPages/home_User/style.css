@@ -11,16 +11,51 @@ body {
   justify-content: space-around;
   padding-top: 100px;
 }
+#agendar{
+  display: flex;
+  justify-content: space-between ;
+  flex-direction: column;
+}
 #agendar img {
   position: absolute;
 }
 #agendar p {
   margin-left: 80px;
 }
+.p-agendamentos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.rota-main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: black;
+  height: 30vh;
+  width: 0.35vw;
+  position: relative;
+  
+}
+.rota-filha {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #629fb6;
+  height: 3vh;
+  width: 1.5vw;
+  position: absolute;
+  border-radius: 50%;
+
+}
 .trajeto {
   border-right: 2px solid black;
+  height: 40vh;
   width: 300px;
   font-family: "League Spartan", sans-serif;
+  display: flex;
+  flex-direction: row;
 }
 .buttons {
   flex-direction: column;
