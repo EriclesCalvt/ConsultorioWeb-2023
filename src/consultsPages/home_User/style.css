@@ -11,9 +11,9 @@ body {
   justify-content: space-around;
   padding-top: 100px;
 }
-#agendar{
+#agendar {
   display: flex;
-  justify-content: space-between ;
+  justify-content: space-between;
   flex-direction: column;
 }
 #agendar img {
@@ -22,13 +22,13 @@ body {
 #agendar p {
   margin-left: 80px;
 }
-.p-agendamentos{
+.p-agendamentos {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-.rota-main {
+/* .rota-main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,19 +36,24 @@ body {
   background-color: black;
   height: 30vh;
   width: 0.35vw;
-  position: relative;
-  
+  position: absolute;
+} */
+.rotas-filhas {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
-.rota-filha{
+.rota-filha {
   display: flex;
   justify-content: space-between;
   align-items: start;
   flex-direction: column;
   align-self: flex-start;
-  height: 1vh;
-  width: 70px;
+  height: 2.5vh;
+  width: 1.5vw;
   border-radius: 50%;
-  border: 3px solid #629fb6;
+  /* border: 3px solid #629fb6; */
+  background-color: #1c353d;
   gap: 10px;
 }
 .trajeto {
