@@ -31,6 +31,7 @@ body {
 .rota-main {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
   background-color: black;
   height: 30vh;
@@ -38,20 +39,20 @@ body {
   position: relative;
   
 }
-.rota-filha {
+.rota-filha{
   display: flex;
+  justify-content: space-between;
+  align-items: start;
   flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #629fb6;
-  height: 3vh;
-  width: 1.5vw;
-  position: absolute;
+  align-self: flex-start;
+  height: 1vh;
+  width: 70px;
   border-radius: 50%;
-
+  border: 3px solid #629fb6;
+  gap: 10px;
 }
 .trajeto {
   border-right: 2px solid black;
-  height: 40vh;
   width: 300px;
   font-family: "League Spartan", sans-serif;
   display: flex;
