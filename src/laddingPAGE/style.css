@@ -97,7 +97,9 @@ body {
 .text h4 {
   font-size: 28px;
 }
+
 .boxs button {
+  margin: 0.5vw;
   background-color: #629fb6;
   height: 19vh;
   width: 19vw;
