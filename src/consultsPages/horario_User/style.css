@@ -13,9 +13,37 @@ body {
   gap: 2%;
   padding-top: 100px;
 }
+.p-agendamentos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.rotas-filhas {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.rota-filha {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  align-self: flex-start;
+  height: 2.5vh;
+  width: 1.5vw;
+  border-radius: 50%;
+  /* border: 3px solid #629fb6; */
+  background-color: #1c353d;
+  gap: 10px;
+}
 .trajeto {
   border-right: 2px solid black;
   width: 300px;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 .traco {
   font-size: 50px;
@@ -25,7 +53,7 @@ body {
   flex-direction: column;
   gap: 50px;
 }
-.especialidades input[type="date"]{
+.especialidades input[type="date"] {
   display: flex;
   justify-content: center;
   text-align: center;

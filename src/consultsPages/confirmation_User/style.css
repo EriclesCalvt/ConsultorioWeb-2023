@@ -13,30 +13,58 @@ body {
   gap: 2%;
   padding-top: 100px;
 }
+.p-agendamentos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.rotas-filhas {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.rota-filha {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  align-self: flex-start;
+  height: 2.5vh;
+  width: 1.5vw;
+  border-radius: 50%;
+  /* border: 3px solid #629fb6; */
+  background-color: #1c353d;
+  gap: 10px;
+}
 .trajeto {
   border-right: 2px solid black;
   width: 300px;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 .traco {
   font-size: 50px;
 }
 .especialidades {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   gap: 50px;
 }
-.container-especialidades{
+.container-especialidades {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
-.div-main-especialidades{
+.div-main-especialidades {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
 }
-.div-main-especialidades button{
+.div-main-especialidades button {
   border-radius: 20px;
   background-color: #629fb6;
   color: white;
@@ -45,45 +73,45 @@ body {
   width: 1vw;
   border: none;
 }
-.container-especialidades-agendamento h2{
+.container-especialidades-agendamento h2 {
   /*    */
 }
-.container-especialidades-agendamento{
+.container-especialidades-agendamento {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 30vw;
   gap: 30px;
 }
-.p-agendamento{
+.p-agendamento {
   display: flex;
   flex-direction: column;
 }
-.agendamento-1{
+.agendamento-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 50px;
 }
-.agendamento-2{
+.agendamento-2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 60px;
 }
-.agendamento-3{
+.agendamento-3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 50px;
 }
-.agendamento-4{
+.agendamento-4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 50px;
 }
-#button-especialidades{
+#button-especialidades {
   display: flex;
   justify-content: center;
   flex-direction: column;
