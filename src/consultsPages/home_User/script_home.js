@@ -5,7 +5,7 @@ urlRote$.addEventListener("click", () => {
 });
 
 function settings() {
-  window.location.href = "../../Settings /Settings.html";
+  window.location.href = "http://127.0.0.1:5500/src/Configuracao/index.html";
 }
 function minhaConta() {
   window.location.href = "../minhaConta/minhaConta.html";
