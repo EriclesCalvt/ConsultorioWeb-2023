@@ -71,10 +71,10 @@ body {
   padding: 5px;
   margin: 0 15px;
 }
-.main_btn {
+.mainBtn {
   display: flex;
 }
-.main_btn > div {
+.mainBtn > div {
   display: flex;
   flex-direction: column;
   gap: 20px;

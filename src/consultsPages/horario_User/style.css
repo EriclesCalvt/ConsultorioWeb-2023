@@ -53,7 +53,19 @@ body {
   flex-direction: column;
   gap: 50px;
 }
-.especialidades input[type="date"] {
+#form-date {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#form-date input[type="submit"] {
+  background-color: #629fb6;
+  color: white;
+  border: 1px solid #629fb6;
+  border-radius: 20px;
+  height: 3.5vh;
+}
+#form-date input[type="date"] {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -185,6 +197,7 @@ body {
 }
 .horas {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 50px;
   font-family: "League Spartan", sans-serif;

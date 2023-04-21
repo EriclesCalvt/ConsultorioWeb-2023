@@ -1,15 +1,13 @@
-const url$ = document.getElementById("btn_Consult");
 const buttons$ = document.getElementsByClassName("especialitys");
 
-url$.addEventListener("click", () => {
-  window.location.href = "../../loginPage/Login.html";
-});
+const especialitysBtns = document.getElementsByClassName("especialitys");
 
-// document
-//   .getElementsByClassName("especialitys")
-//   .addEventListener("click", () => {
-//     window.location.href = "../professional_User/professional_User.html";
-//   });
+for (let i = 0; i < especialitysBtns.length; i++) {
+  especialitysBtns[i].addEventListener("click", function () {
+    const especialityValue = this.value;
+    localStorage.setItem("especialityValue", especialityValue);
+  });
+}
 
 function especialitys() {
   window.location.href = "../professional_User/professional_User.html";

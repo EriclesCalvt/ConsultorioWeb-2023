@@ -95,19 +95,22 @@
       </div>
       <div class="especialidades">
         <h2>SELECIONE O MELHOR HORARIO PARA VOCÊ:</h2>
-        <input type="date" />
         <div class="horas">
           <div>
-            <button class="confirmation" onclick="confirmation()">09:00</button>
-            <button class="confirmation" onclick="confirmation()">09:30</button>
-            <button class="confirmation" onclick="confirmation()">10:00</button>
+            <button class="confirmation" value="09:00">09:00</button>
+            <button class="confirmation" value="09:30">09:30</button>
+            <button class="confirmation" value="10:00">10:00</button>
           </div>
           <div>
-            <button class="confirmation" onclick="confirmation()">10:30</button>
-            <button class="confirmation" onclick="confirmation()">11:00</button>
-            <button class="confirmation" onclick="confirmation()">11:30</button>
+            <button class="confirmation" value="10:30">10:30</button>
+            <button class="confirmation" value="11:00">11:00</button>
+            <button class="confirmation" value="11:30">11:30</button>
           </div>
         </div>
+        <form id="form-date">
+          <input type="date" id="DateInput" />
+          <input type="submit" value="Enviar" onclick="Confirmation()" />
+        </form>
       </div>
     </div>
 

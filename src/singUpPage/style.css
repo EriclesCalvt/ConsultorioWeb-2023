@@ -29,7 +29,7 @@ body {
   padding-top: 100px;
 }
 #Formulario {
-  height: 330px;
+  min-height: 330px;
   background-color: white;
   padding: 60px;
   display: flex;
@@ -67,7 +67,7 @@ input[type="password"] {
   background-color: #629fb6;
   cursor: pointer;
   padding: 25px;
-  width: 11vw;
+  min-width: 11vw;
   font-size: 25px;
   font-family: "League Spartan", sans-serif;
   color: white;

@@ -25,7 +25,7 @@ body {
   padding: 0;
   display: flex;
   flex: 1;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 100px;
 }
 #Formulario {

@@ -1,23 +1,24 @@
-const url$ = document.getElementById("btn_Consult");
-const urlRote$ = document.getElementById("urlRote");
-const urlRote3$ = document.getElementById("button_especialidade");
-
-url$.addEventListener("click", () => {
-  window.location.href = "../../loginPage/Login.html";
-});
-
-// urlRote3$.addEventListener("click", () => {
-//   window.location.href = //ADICIONAR ROTA;
-// });
-
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  // adicionar o envio dos dados para o localStorage
-
-  window.location.href = "../especialidades_User/especialidades.html";
-});
-
 function confirmation() {
   window.location.href = "../especialidades_User/especialidades.html";
 }
+//Constantes paciente:
+const name = localStorage.getItem("Nome");
+const CPF = localStorage.getItem("CPF");
+const RG = localStorage.getItem("RG");
+const DATANASCIMENTO = localStorage.getItem("Data-Nascimento");
+//Seletores das constantes:
+document.querySelector("#p-name").textContent = name;
+document.querySelector("#p-CPF").textContent = CPF;
+document.querySelector("#p-RG").textContent = RG;
+document.querySelector("#p-DATANASCIMENTO").textContent = DATANASCIMENTO;
+
+//Constantes Agendamento:
+const DataAgenda = localStorage.getItem("Data-Consulta");
+const Horario = localStorage.getItem("Horario-Consulta");
+const Especialidade = localStorage.getItem("especialityValue");
+
+//Seletores dos agendamentos:
+document.querySelector("#p-Data-Agendamento").textContent = DataAgenda;
+document.querySelector("#p-horario-agendamento").textContent = Horario;
+document.querySelector("#p-Especialidades-agendamento").textContent =
+  Especialidade;

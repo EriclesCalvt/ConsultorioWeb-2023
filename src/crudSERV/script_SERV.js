@@ -13,7 +13,7 @@ function valorSERV(value) {
       break;
 
     default:
-      window.location.href = "";
+      //window.location.href = "";
       break;
   }
 }

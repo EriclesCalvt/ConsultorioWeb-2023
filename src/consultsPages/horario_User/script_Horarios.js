@@ -1,23 +1,25 @@
-const url$ = document.getElementById("btn_Consult");
-const urlRote$ = document.getElementById("urlRote");
-const urlRote3$ = document.getElementById("button_especialidade");
+const confirmationBtns = document.getElementsByClassName("confirmation");
 
-url$.addEventListener("click", () => {
-  window.location.href = "../../loginPage/Login.html";
-});
-
-// urlRote3$.addEventListener("click", () => {
-//   window.location.href = //ADICIONAR ROTA;
-// });
-
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  // adicionar o envio dos dados para o localStorage
-
-  window.location.href = "../especialidades_User/especialidades.html";
-});
-
-function confirmation() {
-  window.location.href = "../confirmation_User/confirmation.html";
+for (let i = 0; i < confirmationBtns.length; i++) {
+  confirmationBtns[i].addEventListener("click", function () {
+    const ConfirmationValue = this.value;
+    localStorage.setItem("Horario-Consulta", ConfirmationValue);
+  });
 }
+document.querySelector("#form-date").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const DataFormInput = document.getElementById("DateInput");
+  localStorage.setItem("Data-Consulta", DataFormInput.value);
+  GetDataForm = localStorage.getItem("Data-Consulta");
+  DataFormInput.value = "";
+
+  //Condicional:
+  const Consultas = {
+    DataFormInput: GetDataForm,
+  };
+
+  if (Consultas == false) {
+  } else {
+    window.location.href = "../confirmation_User/confirmation.html";
+  }
+});
