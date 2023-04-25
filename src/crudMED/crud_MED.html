@@ -78,10 +78,10 @@
               <option value="Serviços">Serviços</option>
             </select>
           </div>
-          <button type="submit" id="btn_ADICIONAR">+ ADICIONAR</button>
+          <input type="submit" form="Crud" id="btn_ADICIONAR" value="+ ADICIONAR">
       </div>
         <div class="crud-MED">
-          <div>
+          <form id="Crud" method="POST" action="">
             <table class="table">
               <tr id="mains-tr">
                 <td>CPF</td>
@@ -93,11 +93,11 @@
                 <td>AÇÃO</td>
               </tr>
               <tr>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="date"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="text"></td>
+                <td class="td-main"><input type="text" id="CpfInput"></td>
+                <td class="td-main"><input type="text" id="NameInput"></td>
+                <td class="td-main"><input type="date" id="DataInput"></td>
+                <td class="td-main"><input type="text" id="EspecialidadeInput"></td>
+                <td class="td-main"><input type="text" id="CrmInput"></td>
                 <td class="td-main"><a href="#">ATUALIZAR</td>
                 <td class="td-main"><a href="#">EXCLUIR</a></td>
               </tr>
@@ -129,7 +129,7 @@
                 <td class="td-main"><a href="#">EXCLUIR</a></td>
               </tr>
             </table>
-          </div>
+          </form>
         </div>
         </div>
       </div>

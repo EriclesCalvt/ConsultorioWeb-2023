@@ -21,3 +21,26 @@ function valorMED(value) {
       break;
   }
 }
+
+//Envio a API:
+const btnSalvar = document.getElementById("btn_ADICIONAR");
+btnSalvar.addEventListener("click", function () {
+  const medico = {
+    Name: document.getElementById("NameInput").value,
+    cpf: document.getElementById("CpfInput").value,
+    crm: document.getElementById("CrmInput").value,
+    DataNascimento: document.getElementById("DataInput").value,
+    Especialidade: document.getElementById("EspecialidadeInput").value,
+  };
+
+  fetch("http://localhost:3000/doctors/Insert", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(medico),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
+});

@@ -80,12 +80,18 @@
     </div>
 
     <div id="Container">
-      <form id="Formulario">
+      <form id="Formulario" onsubmit="verificarCredenciais(event)">
         <!-- LEAGUE SPARTAN -->
         <h2 id="login">FAÇA SEU LOGIN</h2>
         <div class="icons">
           <span class="material-symbols-outlined"> person </span>
-          <input type="email" name="email" id="email" placeholder="E-Mail:" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-Mail:"
+            required
+          />
         </div>
         <div class="icons">
           <span class="material-symbols-outlined"> lock </span>
@@ -94,6 +100,7 @@
             name="password"
             id="password"
             placeholder="Senha:"
+            required
           />
         </div>
         <a

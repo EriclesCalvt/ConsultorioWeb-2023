@@ -22,3 +22,10 @@ document.querySelector("#p-Data-Agendamento").textContent = DataAgenda;
 document.querySelector("#p-horario-agendamento").textContent = Horario;
 document.querySelector("#p-Especialidades-agendamento").textContent =
   Especialidade;
+
+//constantes dos medicos:
+const selectedDoctorName = localStorage.getItem("selectedDoctorName");
+
+//Seletores dos médicos:
+document.querySelector("#p-medico-agendamento").textContent =
+  selectedDoctorName;

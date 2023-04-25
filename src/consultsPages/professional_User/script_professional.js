@@ -1,23 +1,41 @@
-const url$ = document.getElementById("btn_Consult");
-const urlRote$ = document.getElementById("urlRote");
-const urlRote3$ = document.getElementById("button_especialidade");
+function run(doctorName) {
+  // Verifica se o nome do médico foi passado como argumento
+  if (doctorName) {
+    // Armazena o nome do médico no LocalStorage
+    localStorage.setItem("selectedDoctorName", doctorName);
+    window.location.href = "../horario_User/horarios_User.html";
+  }
 
-url$.addEventListener("click", () => {
-  window.location.href = "../../loginPage/Login.html";
-});
-
-// urlRote3$.addEventListener("click", () => {
-//   window.location.href = //ADICIONAR ROTA;
-// });
-
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  // adicionar o envio dos dados para o localStorage
-
-  window.location.href = "../especialidades_User/especialidades.html";
-});
-
-function run() {
-  window.location.href = "../horario_User/horarios_User.html";
+  // Sua implementação aqui
 }
+async function fetchDoctors() {
+  const response = await fetch("http://localhost:3000/Doctor");
+  const doctors = await response.json();
+  const buttonEspecialidade = document.querySelector("#button_especialidade");
+
+  // Limpa a lista atual de botões
+  buttonEspecialidade.innerHTML = "";
+
+  // Adiciona um botão para cada médico retornado pela API
+  for (const doctor of doctors) {
+    const button = document.createElement("button");
+    button.classList.add("doutor");
+    button.addEventListener("click", () => {
+      run(doctor.Name); // Passa o nome do médico como argumento
+    });
+
+    const div = document.createElement("div");
+    const name = document.createElement("div");
+    const crm = document.createElement("h6");
+
+    name.textContent = `Nome: DR.${doctor.Name}`;
+    crm.textContent = `CRM: ${doctor.crm}`;
+
+    div.appendChild(name);
+    div.appendChild(crm);
+    button.appendChild(div);
+    buttonEspecialidade.appendChild(button);
+  }
+}
+
+fetchDoctors();
