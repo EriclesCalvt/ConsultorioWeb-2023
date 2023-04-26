@@ -1,4 +1,7 @@
 const urlRote$ = document.getElementById("urlRote");
+document.querySelector("#CPF").addEventListener("click", () => {
+  
+})
 
 document.querySelector(".form-user").addEventListener("submit", (e) => {
   // adicionar o envio dos dados para o localStorage
