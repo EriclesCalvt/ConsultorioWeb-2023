@@ -6,6 +6,38 @@ body {
   background-color: #edf8f7;
   font-family: "League Spartan", sans-serif;
 }
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+#menu-lateral {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  color: black;
+  animation: slide-in-right 0.5s;
+  animation-fill-mode: forwards;
+}
+#menu-lateral div {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#menu-lateral.mostrar {
+  display: block;
+}
+
 #Container {
   display: flex;
   flex: 1;

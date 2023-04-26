@@ -29,3 +29,14 @@ const selectedDoctorName = localStorage.getItem("selectedDoctorName");
 //Seletores dos médicos:
 document.querySelector("#p-medico-agendamento").textContent =
   selectedDoctorName;
+function toggleMenu() {
+  var menu = document.getElementById("menu-lateral");
+  menu.classList.toggle("mostrar");
+  if (mostrar === undefined) {
+    menu.classList.toggle("mostrar");
+  } else if (mostrar) {
+    menu.classList.add("mostrar");
+  } else {
+    menu.classList.remove("mostrar");
+  }
+}

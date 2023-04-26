@@ -6,6 +6,22 @@ body {
   width: 100%;
   background-color: #edf8f7;
 }
+.hidden {
+  display: none;
+}
+
+#signup-form {
+  display: none;
+}
+
+#form-container {
+  transition: transform 1s ease-in-out;
+}
+
+#form-container.flip {
+  transform: rotateY(180deg);
+}
+
 .movimentacao {
   display: flex;
   flex-direction: column;
@@ -20,7 +36,7 @@ body {
   width: 150px;
   background-color: #629fb6;
 }
-#Container {
+#form-container {
   margin: 0;
   padding: 0;
   display: flex;
@@ -28,7 +44,7 @@ body {
   justify-content: center;
   padding-top: 100px;
 }
-#Formulario {
+#login-form {
   height: 330px;
   background-color: white;
   padding: 60px;
@@ -41,16 +57,30 @@ body {
   border-radius: 30px;
   flex: 0;
 }
-form#Formulario {
+#signup-form {
+  display: none;
+  min-height: 330px;
+  background-color: white;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  /*não quebra linha*/
+  white-space: nowrap;
+  border-radius: 30px;
+  flex: 0;
+}
+form#login-form {
   box-shadow: 10px 5px 15px rgb(209, 209, 209);
   height: 45vh;
 }
-#Formulario h2 {
+#login-form h2 {
   margin-bottom: 40px;
   color: #21506b;
   font-family: "League Spartan", sans-serif;
 }
-#Formulario input[type="email"],
+#login-form input[type="email"],
 input[type="password"] {
   padding: 10px 5px;
   border: none;
@@ -60,7 +90,38 @@ input[type="password"] {
   border-radius: 50px;
   outline: 0;
 }
-#Formulario input[type="submit"] {
+#login-form input[type="submit"] {
+  margin-top: 25px;
+  border: none;
+  border-radius: 50px;
+  background-color: #629fb6;
+  cursor: pointer;
+  padding: 25px;
+  width: 11vw;
+  font-size: 25px;
+  font-family: "League Spartan", sans-serif;
+  color: white;
+}
+form#signup-form {
+  box-shadow: 10px 5px 15px rgb(209, 209, 209);
+  height: 45vh;
+}
+#signup-form h2 {
+  margin-bottom: 40px;
+  color: #21506b;
+  font-family: "League Spartan", sans-serif;
+}
+#signup-form input[type="email"],
+input[type="password"] {
+  padding: 10px 5px;
+  border: none;
+  height: 4vh;
+  width: 11vw;
+  background-color: #edf8f7;
+  border-radius: 50px;
+  outline: 0;
+}
+#signup-form input[type="submit"] {
   margin-top: 25px;
   border: none;
   border-radius: 50px;
@@ -99,7 +160,16 @@ nav a {
   justify-content: center;
   align-items: center;
 }
-#Formulario {
+#login-form {
+  position: relative;
+  transition: 0.8s ease-in;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#signup-form {
   position: relative;
   transition: 0.8s ease-in;
   transform-style: preserve-3d;
@@ -118,7 +188,13 @@ nav a {
   justify-content: center;
   align-items: center;
 }
-#Formulario a {
+#login-form a {
+  color: #629fb6;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+#signup-form a {
   color: #629fb6;
   font-family: "League Spartan", sans-serif;
   display: flex;

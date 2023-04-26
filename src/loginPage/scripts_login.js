@@ -1,6 +1,5 @@
 const bcrypt = require("bcrypt");
 const UserController = require("../../CRUD-NODE-JS/src/controllers/UserController");
-
 // selecionar o formulário de login e escutar o evento de submit
 const form = document.querySelector("#Formulario");
 form.addEventListener("submit", handleSubmit);

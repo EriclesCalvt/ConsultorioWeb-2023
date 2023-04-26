@@ -6,6 +6,15 @@ for (let i = 0; i < confirmationBtns.length; i++) {
     localStorage.setItem("Horario-Consulta", ConfirmationValue);
   });
 }
+const confirmationButtons = document.querySelectorAll(".confirmation");
+
+// Adicione um evento de clique (click) a cada botão
+confirmationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Altere a cor de fundo do botão clicado
+    button.style.backgroundColor = "#19a9dd";
+  });
+});
 document.querySelector("#form-date").addEventListener("submit", (e) => {
   e.preventDefault();
   const DataFormInput = document.getElementById("DateInput");
@@ -23,3 +32,14 @@ document.querySelector("#form-date").addEventListener("submit", (e) => {
     window.location.href = "../confirmation_User/confirmation.html";
   }
 });
+function toggleMenu() {
+  var menu = document.getElementById("menu-lateral");
+  menu.classList.toggle("mostrar");
+  if (mostrar === undefined) {
+    menu.classList.toggle("mostrar");
+  } else if (mostrar) {
+    menu.classList.add("mostrar");
+  } else {
+    menu.classList.remove("mostrar");
+  }
+}

@@ -54,20 +54,18 @@
           <h5>ESPECIALIDADES</h5>
         </div>
       </div>
-      <a href="../../loginPage/Login.html"></a>
-      <div class="btn_marcar">
-        <div class="btn_marcarConsulta">
-          <button onclick="url()" id="btn_Consult">
-            MARQUE SUA<br />
-            CONSULTA
-          </button>
+      <div class="pai" onclick="toggleMenu()">
+        <div class="filha"></div>
+        <div class="filha"></div>
+        <div class="filha"></div>
+      </div>      
+      <div id="menu-lateral">
+        <div>
+          <a href="#" onclick="toggleMenu(false)">Fechar Menu</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
-      </div>
-      <div class="pai" onclick="menu()">
-        <div class="filha"></div>
-        <div class="filha"></div>
-        <div class="filha"></div>
-      </div>
+      </div> 
     </div>
 
     <div id="Container">
@@ -83,12 +81,12 @@
         </div>
         <div id="agendar">
           <div class="p-agendamentos">
-            <p>Agendar consulta</p>
-            <p>Dados do paciente</p>
-            <p>Especialidade</p>
-            <p>profissional</p>
-            <p>horario</p>
-            <p>Confirmação</p>
+            <p><strong>Agendar consulta</strong></p>
+            <p><strong>Dados do paciente</strong></p>
+            <p><strong>Especialidade</strong></p>
+            <p><strong>Profissional</strong></p>
+            <p><strong>Horário</strong></p>
+            <p><strong>Confirmação</strong></p> 
           </div>
         </div>
       </div>

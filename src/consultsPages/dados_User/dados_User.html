@@ -53,19 +53,17 @@
           <h5>ESPECIALIDADES</h5>
         </div>
       </div>
-      <a href="../../loginPage/Login.html"></a>
-      <div class="btn_marcar">
-        <div class="btn_marcarConsulta">
-          <button onclick="url()" id="btn_Consult">
-            MARQUE SUA<br />
-            CONSULTA
-          </button>
-        </div>
+      <div class="pai" onclick="toggleMenu()">
+        <div class="filha"></div>
+        <div class="filha"></div>
+        <div class="filha"></div>
       </div>
-      <div class="pai" onclick="menu()">
-        <div class="filha"></div>
-        <div class="filha"></div>
-        <div class="filha"></div>
+      <div id="menu-lateral">
+        <div>
+          <a href="#" onclick="toggleMenu(false)">Fechar Menu</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
       </div>
     </div>
 
@@ -82,12 +80,12 @@
         </div>
         <div id="agendar">
           <div class="p-agendamentos">
-            <p>Agendar consulta</p>
-            <p>Dados do paciente</p>
-            <p>Especialidade</p>
-            <p>profissional</p>
-            <p>horario</p>
-            <p>Confirmação</p>
+            <p><strong>Agendar consulta</strong></p>
+            <p><strong>Dados do paciente</strong></p>
+            <p><strong>Especialidade</strong></p>
+            <p><strong>Profissional</strong></p>
+            <p><strong>Horário</strong></p>
+            <p><strong>Confirmação</strong></p>
           </div>
         </div>
       </div>
@@ -96,28 +94,28 @@
         <form class="form-user">
           <h2>DADOS DO PACIENTE:</h2>
           <div>
-            <div>
+            <div id="L-1-form">
               <label for=""
                 >Nivel de relacionamento com o dono(a) desta conta:</label
               ><br />
               <select name="" id="" style="margin-top: 13px">
                 <option value=""></option>
-                <option value="">Muito</option>
-                <option value="">Médio</option>
-                <option value="">Pouca</option></select
+                <option value="">Amigo(a)</option>
+                <option value="">Parente(a)</option>
+                <option value="">Filho(a)</option></select
               ><br />
               <label for="">Nome do paciente:</label><br />
-              <input type="text" id="Nome"/><br />
+              <input type="text" id="Nome" /><br />
               <label for="">Registro geral (RG):</label><br />
-              <input type="text" id="RG"/><br />
+              <input type="text" id="RG" /><br />
               <label for="">Cadastro de pessoa física (CPF):</label><br />
-              <input type="text" id="CPF"/><br />
+              <input type="text" id="CPF" /><br />
               <label for="">Telefone:</label><br />
               <input type="text" /><br />
               <div class="inputs-inline">
                 <div>
                   <label for="">Data de nascimento:</label>
-                  <input type="date"  id="Data"/>
+                  <input type="date" id="Data" />
                 </div>
                 <div>
                   <label for="">Sexo:</label>
@@ -125,7 +123,7 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div id="L-2-form">
               <label for="">CEP:</label><br />
               <input type="text" /><br />
               <label for="">Cidade:</label><br />
