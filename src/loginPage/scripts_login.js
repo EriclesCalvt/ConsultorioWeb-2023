@@ -1,6 +1,5 @@
-
 // selecionar o formulário de login e escutar o evento de submit
-const btn = document.getElementById('btn')
+const btn = document.getElementById("btn");
 const form = document.querySelector("#Formulario");
 btn.addEventListener("click", handleSubmit);
 
@@ -11,7 +10,7 @@ async function handleSubmit(e) {
   const passwordInput = document.getElementById("password");
   const email = emailInput.value;
   const password = passwordInput.value;
- 
+
   // enviar os dados de login para o servidor
   const response = await fetch("http://localhost:3000/User", {
     method: "POST",
@@ -20,7 +19,6 @@ async function handleSubmit(e) {
     },
     body: JSON.stringify({ email, password }),
   });
-
 
   // verificar se o login foi bem-sucedido ou não
   const data = await response.json();
