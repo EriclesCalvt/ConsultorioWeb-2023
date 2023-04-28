@@ -24,6 +24,7 @@ body {
   height: 100%;
   background-color: #fff;
   z-index: 1000;
+  font-family: "League Spartan", sans-serif;
   color: black;
   animation: slide-in-right 0.5s;
   animation-fill-mode: forwards;
@@ -34,10 +35,33 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+#menu-lateral div a {
+  display: flex;
+  justify-content: center;
+}
+#menu-lateral div a img {
+  height: 10vh;
+  width: 5vw;
+}
+#menu-lateral div a {
+  color: black;
+  font-size: 3vh;
+  font-weight: 550;
+  text-decoration: none;
+}
+#menu-lateral div img {
+  display: flex;
+  align-self: center;
+  width: 60%;
+  padding-top: 10vh;
+}
 #menu-lateral.mostrar {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
 #Container {
   display: flex;
   flex: 1;

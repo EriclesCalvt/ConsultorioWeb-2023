@@ -3,6 +3,10 @@ const btn = document.getElementById("btn");
 const form = document.querySelector("#Formulario");
 btn.addEventListener("click", handleSubmit);
 
+/*document.getElementById("Whatsapp").addEventListener("click", () => {
+  window.location.href = "https://wa.me/5585991985991";
+});*/
+
 async function handleSubmit(e) {
   e.preventDefault();
   // obter os valores dos campos de email e senha do formulário de login
@@ -25,9 +29,31 @@ async function handleSubmit(e) {
 
   if (data.message == "ok") {
     // o login foi bem-sucedido, redirecionar para a página desejada
-    window.location.href = "../crudMED/crud_MED.html";
+    if (email == "ericlesprogrammer@gmail.com") {
+      alert("Bem vindo ADM 😎");
+      setTimeout(() => {
+        window.location.href = "../crudMED/crud_MED.html";
+      }, 500);
+    } else {
+      alert("Bem vindo ! ✅");
+      setTimeout(() => {
+        window.location.href = "../consultsPages/home_User/home_User.html";
+      }, 500);
+    }
   } else {
     // o login falhou, mostrar uma mensagem de erro
     alert(data.message);
+  }
+}
+
+function toggleMenu() {
+  var menu = document.getElementById("menu-lateral");
+  menu.classList.toggle("mostrar");
+  if (mostrar === undefined) {
+    menu.classList.toggle("mostrar");
+  } else if (mostrar) {
+    menu.classList.add("mostrar");
+  } else {
+    menu.classList.remove("mostrar");
   }
 }

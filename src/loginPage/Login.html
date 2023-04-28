@@ -32,6 +32,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,20 +62,25 @@
       <div class="btn_marcar">
         <div class="btn_marcarConsulta"></div>
       </div>
-      <div class="pai" onclick="abrirMenu()">
+      <div class="pai" onclick="toggleMenu()">
         <div class="filha"></div>
         <div class="filha"></div>
         <div class="filha"></div>
-        <nav id="abrirMenu">
-          <a href="">FECHAR</a>
+      </div>
+      <div id="menu-lateral">
+        <div>
+          <a href="#" onclick="toggleMenu(false)"
+            ><img src="../../assets/pngwing.com.png" alt="Return"
+          /></a>
           <hr />
-          <a href="">Sobre nós</a>
+          <a href="#"><strong>Sobre nós</strong></a>
           <hr />
-          <a href="">Contate-nos</a>
+          <a href="#"><strong>Trabalhe conosco</strong></a>
           <hr />
-          <a href="">Contato</a>
+          <a href="#"><strong>Contato</strong></a>
           <hr />
-        </nav>
+          <img src="../../assets/Mais Brasil Logo.png" alt="Logo" />
+        </div>
       </div>
     </div>
 
