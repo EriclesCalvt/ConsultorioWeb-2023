@@ -164,6 +164,9 @@ form > div {
   display: flex;
   gap: 5%;
 }
+#select-sexo{
+  width: 15vw;
+}
 .inputs-inline {
   display: flex;
   justify-content: space-between;

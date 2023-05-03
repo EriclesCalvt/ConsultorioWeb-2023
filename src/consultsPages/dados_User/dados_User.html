@@ -107,19 +107,19 @@
                 >Nivel de relacionamento com o dono(a) desta conta:</label
               ><br />
               <select name="" id="" style="margin-top: 13px">
-                <option value=""></option>
+                <option value="">Selecione:</option>
                 <option value="">Amigo(a)</option>
                 <option value="">Parente(a)</option>
                 <option value="">Filho(a)</option></select
               ><br />
               <label for="">Nome do paciente:</label><br />
-              <input type="text" id="Nome" /><br />
+              <input type="text" id="Nome" placeholder="Digite o nome do paciente:"/><br />
               <label for="">Registro geral (RG):</label><br />
-              <input type="text" id="RG" /><br />
-              <label for="">Cadastro de pessoa física (CPF):</label><br />
-              <input type="text" id="CPF" /><br />
+              <input type="text" id="RG" placeholder="Digite seu RG:"/><br />
+              <label for="" >Cadastro de pessoa física (CPF):</label><br />
+              <input type="text" id="CPF" maxlength="14" placeholder="Digite seu CPF:"/><br />
               <label for="">Telefone:</label><br />
-              <input type="text" /><br />
+              <input type="text" id="telefone" maxlength="15" placeholder="Digite seu telefone"><br />
               <div class="inputs-inline">
                 <div>
                   <label for="">Data de nascimento:</label>
@@ -127,23 +127,28 @@
                 </div>
                 <div>
                   <label for="">Sexo:</label>
-                  <input type="text" />
-                </div>
+                  <select id="select-sexo">
+                    <option value="">Selecione:</option>
+                    <option value="">Masculino</option>
+                    <option value="">Feminino</option>
+                    <option value="">Outro</option>
+                  </select>
+                </div>  
               </div>
             </div>
             <div id="L-2-form">
               <label for="">CEP:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o seu CEP:"/><br />
               <label for="">Cidade:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o nome da sua cidade:"/><br />
               <label for="">Bairro:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o nome do seu bairro:"/><br />
               <label for="">Rua:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o nome da sua rua:"/><br />
               <label for="">Numero da casa:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o número da casa:"/><br />
               <label for="">Complemento:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o nome do paciente:"/><br />
             </div>
           </div>
           <input type="submit" name="AVANÇAR" id="urlRote_2" value="AVANÇAR" />
