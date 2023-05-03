@@ -52,6 +52,7 @@ input {
   border: 1px solid #629fb6;
   border-radius: 40px;
   margin-top: 10px;
+  padding-left: 10px;
 }
 select {
   outline: none;
@@ -62,6 +63,9 @@ select {
   color: black;
   border: 1px solid #629fb6;
   border-radius: 40px;
+}
+#select-sexo{
+  width: 10vw;
 }
 option {
   outline: none;

@@ -39,14 +39,14 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
-      href="../../assets/Mais Brasil Logo.png"
+      href="../../../assets/Mais Brasil Logo.png"
       type="image/png"
     />
   </head>
   <body>
     <div id="header">
       <div class="logo">
-        <img src="../../assets/Mais Brasil Logo.png" alt="" />
+        <img src="../../../assets/Mais Brasil Logo.png" alt="" />
         <div id="text">
           <!-- LEAGUE SPARTAN -->
           <h1>Centro Médico</h1>
@@ -66,65 +66,65 @@
 
     <div id="Container">
       <div class="form">
-        <form>
-          <h2>ATUALIZAR DADOS:</h2>
+        <form class="form-user">
+          <h2>DADOS DO PACIENTE:</h2>
           <div>
-            <div>
-              <label for="">Selecionar paciente:</label><br />
+            <div id="L-1-form">
+              <label for=""
+                >Nivel de relacionamento com o dono(a) desta conta:</label
+              ><br />
               <select name="" id="" style="margin-top: 13px">
-                <option value=""></option>
-                <option value="">Muito</option>
-                <option value="">Médio</option>
-                <option value="">Pouca</option></select
+                <option value="">Selecione:</option>
+                <option value="">Amigo(a)</option>
+                <option value="">Parente(a)</option>
+                <option value="">Filho(a)</option></select
               ><br />
               <label for="">Nome do paciente:</label><br />
-              <input type="text" /><br />
+              <input type="text" id="Nome" placeholder="Digite o nome do paciente:"/><br />
               <label for="">Registro geral (RG):</label><br />
-              <input type="text" /><br />
-              <label for="">Cadastro de pessoa física (CPF):</label><br />
-              <input type="text" /><br />
+              <input type="text" id="RG" placeholder="Digite seu RG:"/><br />
+              <label for="" >Cadastro de pessoa física (CPF):</label><br />
+              <input type="text" id="CPF" maxlength="14" placeholder="Digite seu CPF:"/><br />
               <label for="">Telefone:</label><br />
-              <input type="text" /><br />
+              <input type="text" id="telefone" maxlength="15" placeholder="Digite seu telefone"><br />
               <div class="inputs-inline">
                 <div>
                   <label for="">Data de nascimento:</label>
-                  <input type="date" />
+                  <input type="date" id="Data" />
                 </div>
                 <div>
                   <label for="">Sexo:</label>
-                  <select name="" id="" style="width: 10vw">
-                    <option value=""></option>
+                  <select id="select-sexo">
+                    <option value="">Selecione:</option>
+                    <option value="">Masculino</option>
+                    <option value="">Feminino</option>
+                    <option value="">Outro</option>
                   </select>
-                </div>
+                </div>  
               </div>
             </div>
-            <div>
+            <div id="L-2-form">
               <label for="">CEP:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o seu CEP:"/><br />
               <label for="">Cidade:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o nome da sua cidade:"/><br />
               <label for="">Bairro:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o nome do seu bairro:"/><br />
               <label for="">Rua:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o nome da sua rua:"/><br />
               <label for="">Numero da casa:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o número da casa:"/><br />
               <label for="">Complemento:</label><br />
-              <input type="text" /><br />
+              <input type="text" placeholder="Digite o nome do paciente:"/><br />
             </div>
           </div>
-          <input
-            type="submit"
-            name="AVANÇAR"
-            id="urlRote_2"
-            value="ATUALIZAR"
-          />
+          <input type="submit" name="AVANÇAR" id="urlRote_2" value="AVANÇAR" />
         </form>
       </div>
     </div>
 
     <footer>
-      <img src="../../assets/Mais Brasil Logo.png" alt="" />
+      <img src="../../../assets/Mais Brasil Logo.png" alt="" />
       <div class="feet">
         <div class="txt1">
           <h1>INICIO</h1>
@@ -147,15 +147,15 @@
         </div>
         <div class="btn_contact">
           <div class="contact">
-            <img src="../../assets/Whatsapp_logo.png" id="Whatsapp" alt="" /><a
+            <img src="../../../assets/Whatsapp_logo.png" id="Whatsapp" alt="" /><a
               href="#"
             ></a>
             <img
-              src="../../assets/Instagram_logo.png"
+              src="../../../assets/Instagram_logo.png"
               id="Instagram"
               alt=""
             /><a href="#"></a>
-            <img src="../../assets/facebook_logo.png" id="Facebook" alt="" /><a
+            <img src="../../../assets/facebook_logo.png" id="Facebook" alt="" /><a
               href="#"
             ></a>
           </div>
