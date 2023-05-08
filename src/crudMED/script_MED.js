@@ -1,6 +1,5 @@
 let select = document.querySelector("#select");
 const selectValue = document.getElementById("select");
-console.log(selectValue.value);
 
 function valorMED(value) {
   switch (value) {
@@ -21,6 +20,11 @@ function valorMED(value) {
       break;
   }
 }
+
+document.querySelector("#btn_ADICIONAR").addEventListener("submit", (e) => {
+  e.preventDefault;
+  alert("oi");
+})
 
 //Envio a API:
 const btnSalvar = document.getElementById("btn_ADICIONAR");
@@ -44,3 +48,5 @@ btnSalvar.addEventListener("click", function () {
     .then((data) => console.log(data))
     .catch((error) => console.error(error));
 });
+
+

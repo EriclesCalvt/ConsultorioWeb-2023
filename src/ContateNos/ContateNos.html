@@ -32,6 +32,11 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,58 +59,46 @@
           <h5>ESPECIALIDADES</h5>
         </div>
       </div>
-      <a href="../../loginPage/Login.html"></a>
+      <a href="../loginPage/Login.html"></a>
       <div class="btn_marcar">
         <div class="btn_marcarConsulta">
+          <button onclick="url()" id="btn_Consult">
+            MARQUE SUA<br />
+            CONSULTA
+          </button>
         </div>
       </div>
-      <div class="pai" onclick="menu()">
+      <div class="pai" onclick="toggleMenu()">
         <div class="filha"></div>
         <div class="filha"></div>
         <div class="filha"></div>
+      </div>
+      <div id="menu-lateral">
+        <div>
+          <a href="#" onclick="toggleMenu(false)"
+            ><img src="../../assets/pngwing.com.png" alt="Return"
+          /></a>
+          <hr />
+          <a href="#"><strong>Sobre nós</strong></a>
+          <hr />
+          <a href="#"><strong>Trabalhe conosco</strong></a>
+          <hr />
+          <a href="#"><strong>Contato</strong></a>
+          <hr />
+          <img src="../../assets/Mais Brasil Logo.png" alt="Logo" />
+        </div>
       </div>
     </div>
-<!--  -->
 
-    <div class="all-div">
-      <div class="div-Conteiner">
-        <div id="Container">
-          <div class="selectt">
-            <select id="select" onclick="valorMED(this.value)">
-              <option value=""></option>
-              <option value="Médicos">Médicos</option>
-              <option value="Pacientes">Pacientes</option>
-              <option value="Serviços">Serviços</option>
-            </select>
-          </div>
-        </div>
-        <div class="crud-MED">
-          <form id="Crud" method="POST">
-            <table class="table">
-              <tr id="mains-tr">
-                <td>CPF</td>
-                <td>NOME</td>
-                <td>DATA NASCIMENTO</td>
-                <td>ESPECIALIDADES</td>
-                <td>CRM</td>
-                <td>AÇÃO</td>
-                <td>AÇÃO</td>
-              </tr>
-              <tr>
-                <td class="td-main"><input type="text" id="CpfInput"></td>
-                <td class="td-main"><input type="text" id="NameInput"></td>
-                <td class="td-main"><input type="date" id="DataInput"></td>
-                <td class="td-main"><input type="text" id="EspecialidadeInput"></td>
-                <td class="td-main"><input type="text" id="CrmInput"></td>
-                <td class="td-main"><a href="#">ATUALIZAR</td>
-                <td class="td-main"><a href="#">EXCLUIR</a></td>
-                  
-                </tr>
-              </table>
-          </form>
-        </div>
-        </div>
+    <div id="Container">
+      <div class="img">
+        <img
+          src="../../assets/sobrenos.png"
+          style="height: 70.5vh; width: 100%; opacity: calc(95%);"
+          alt=""
+        /><br />
       </div>
+    </div>
 
     <footer>
       <img src="../../assets/Mais Brasil Logo.png" alt="" />
@@ -147,6 +140,6 @@
         </div>
       </div>
     </footer>
-    <script src="script_MED.js"></script>
+    <script src="script_ContrateNos.js"></script>
   </body>
 </html>
