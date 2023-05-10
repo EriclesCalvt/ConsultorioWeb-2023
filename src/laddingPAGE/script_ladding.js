@@ -13,11 +13,12 @@ function toggleMenu() {
     menu.classList.remove("mostrar");
   }
 }
+
 //carrossel:
   $(document).ready(function(){
     $('.carrossel').slick({
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 2000,
       dots: true,
       infinite: true,
       speed: 500,
