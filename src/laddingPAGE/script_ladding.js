@@ -13,3 +13,17 @@ function toggleMenu() {
     menu.classList.remove("mostrar");
   }
 }
+//carrossel:
+  $(document).ready(function(){
+    $('.carrossel').slick({
+      autoplay: true,
+      autoplaySpeed: 1000,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      prevArrow: null,
+      cssEase: 'linear'
+    });
+  });
+
