@@ -5,7 +5,7 @@ urlRote$.addEventListener("click", () => {
 });
 
 function settings() {
-  window.location.href = "../../Configuracao/index.html";
+  window.location.href = "../../Configuracao/alterarDados/loggout/index.html";
 }
 function minhaConta() {
   window.location.href = "../minhaConta/minhaConta.html";

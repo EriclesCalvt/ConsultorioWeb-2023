@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
 }
+
 body {
   background-color: #edf8f7;
 }
@@ -185,9 +186,9 @@ body {
   font-size: 40px;
 }
 .boxs {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
-  padding-left: 20vw;
+  padding-left: 15vw;
 }
 
 .carrossel {
@@ -233,6 +234,10 @@ body {
 
 .dot.active {
   background-color: #717171;
+}
+.ball-1 {
+  height: 20px;
+  background-color: #629fb6;
 }
 
 footer {
