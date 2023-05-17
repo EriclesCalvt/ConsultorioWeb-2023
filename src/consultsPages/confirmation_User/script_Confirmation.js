@@ -40,3 +40,59 @@ function toggleMenu() {
     menu.classList.remove("mostrar");
   }
 }
+
+//Envio a API:
+// Obtenha o elemento do botão por ID
+const button = document.querySelector('button');
+
+// Adicione um evento de clique ao botão
+button.addEventListener('click', () => {
+  // Obtenha os valores das tags <p> por ID
+  const dataAgendamento = document.getElementById('p-Data-Agendamento').textContent;
+  const medicoAgendamento = document.getElementById('p-medico-agendamento').textContent;
+  const horarioAgendamento = document.getElementById('p-horario-agendamento').textContent;
+  const especialidadeAgendamento = document.getElementById('p-Especialidades-agendamento').textContent;
+  const nomePaciente = document.getElementById('p-name').textContent;
+  const rgPaciente = document.getElementById('p-RG').textContent;
+  const cpfPaciente = document.getElementById('p-CPF').textContent;
+  const dataNascimentoPaciente = document.getElementById('p-DATANASCIMENTO').textContent;
+
+  // Crie um objeto com os dados
+  const consulta = {
+    agendamento: {
+      data: dataAgendamento,
+      horario: horarioAgendamento,
+      medico: medicoAgendamento,
+      especialidade: especialidadeAgendamento,
+    },
+    paciente: {
+      nome: nomePaciente,
+      rg: rgPaciente,
+      cpf: cpfPaciente,
+      dataNascimento: dataNascimentoPaciente,
+    }
+  };
+
+  // Envie os dados para a rota da sua API MongoDB
+  fetch('http://localhost:3000/Querie/Insert', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(consulta)
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Manipule a resposta da API conforme necessário
+      alert("Consulta Marcada !")
+      setInterval(()=> {
+        window.location.href = "../home_User/home_User.html"
+      }, 500)
+      console.log(data);
+    })
+    .catch(error => {
+      // Manipule erros de requisição
+      alert("Algum erro aconteceu !")
+      console.error(error);
+    });
+});

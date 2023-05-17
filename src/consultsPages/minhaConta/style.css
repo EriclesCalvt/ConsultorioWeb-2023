@@ -71,15 +71,22 @@ body {
   padding-top: 100px;
   font-family: "League Spartan", sans-serif;
 }
+.Container{
+  display: none;
+}
 .texto-box {
   display: flex;
   justify-content: center;
   font-family: "League Spartan", sans-serif;
 }
+button{
+  cursor: pointer
+}
 .Main-box {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 3vw;
   font-family: "League Spartan", sans-serif;
 }
