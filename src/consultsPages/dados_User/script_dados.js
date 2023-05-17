@@ -69,3 +69,27 @@ telefoneInput.addEventListener('input', () => {
   telefoneInput.value = telefone;
 });
 
+
+var CEP = document.getElementById("CEP");
+CEP.addEventListener("input", function () {
+  var cep = CEP.value;
+  if (cep.length === 8) {
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then(response => response.json())
+      .then(data => {
+        if (!data.erro) {
+          
+         
+          document.getElementById("cidade").value = data.localidade;
+         
+        } else {
+          
+          document.getElementById("cidade").value = "";
+          
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+});
