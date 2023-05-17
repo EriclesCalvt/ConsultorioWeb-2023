@@ -15,6 +15,9 @@ body {
   gap: 10px;
   flex-direction: column;
 }
+.boxs button{
+  cursor: pointer;
+}
 #Container {
   display: flex;
   font-family: "League Spartan", sans-serif;

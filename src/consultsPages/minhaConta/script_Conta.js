@@ -17,6 +17,7 @@ fetch("http://localhost:3000/Querie")
     
   })
   .then(function (data) {
+    
     // Se houver consultas, crie uma nova caixa para cada consulta
     if (data.length > 0) {
       var consultasContainer = document.querySelector(".Main-box");
