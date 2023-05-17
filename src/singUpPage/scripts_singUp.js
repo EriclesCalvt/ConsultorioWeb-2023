@@ -44,3 +44,18 @@ function toggleMenu() {
     menu.classList.remove("mostrar");
   }
 }
+
+
+let butn = document.querySelector('.lnr-eye');
+
+butn.addEventListener('click', function () {
+
+  let input = document.querySelector('#password');
+
+  if (input.getAttribute('type') == 'password') {
+    input.setAttribute('type', 'text');
+  } else {
+    input.setAttribute('type', 'password');
+  }
+
+});

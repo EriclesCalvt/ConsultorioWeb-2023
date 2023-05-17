@@ -15,6 +15,14 @@ body {
   }
 }
 
+.lnr-eye {
+  position: relative;
+  right: 20px;
+  
+  cursor: pointer;
+}
+
+
 #menu-lateral {
   display: none;
   position: fixed;
@@ -106,6 +114,16 @@ form#Formulario {
   color: #21506b;
   font-family: "League Spartan", sans-serif;
 }
+#login-form input[type="email"],
+input[type="password"], input[type="text"] {
+  padding: 10px 5px;
+  border: none;
+  height: 4vh;
+  width: 11vw;
+  background-color: #edf8f7;
+  border-radius: 50px;
+  outline: 0;
+}
 #Formulario input[type="email"],
 input[type="password"] {
   padding: 10px 5px;
@@ -116,6 +134,7 @@ input[type="password"] {
   border-radius: 50px;
   outline: 0;
 }
+
 #Formulario input[type="submit"] {
   margin-top: 25px;
   border: none;
