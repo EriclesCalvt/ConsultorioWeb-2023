@@ -171,6 +171,9 @@ form > div {
   display: flex;
   justify-content: space-between;
 }
+.inputs-inline [type="date"]{
+  margin-top: 1px;
+}
 .inputs-inline input {
   width: 13vw;
 }
