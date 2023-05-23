@@ -1,6 +1,6 @@
 const url$ = document.getElementById("btn_Consult");
 url$.addEventListener("click", () => {
-  window.location.href = "../loginPage/Login.html";
+  window.location.href = "../loginPage/index.html";
 });
 function toggleMenu() {
   var menu = document.getElementById("menu-lateral");

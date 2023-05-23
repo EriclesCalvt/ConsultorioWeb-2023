@@ -26,7 +26,7 @@ async function handleSubmit(e) {
     // o cadastro foi bem-sucedido, redirecionar para a página desejada
     alert("Cadastrado com sucesso !, agora faça seu login !");
     setTimeout(() => {
-      window.location.href = "../loginPage/Login.html";
+      window.location.href = "../loginPage/index.html";
     }, 500);
   } else {
     // o cadastro falhou, mostrar uma mensagem de erro
