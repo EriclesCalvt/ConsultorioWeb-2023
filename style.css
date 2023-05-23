@@ -14,7 +14,6 @@ body {
     transform: translateX(0);
   }
 }
-
 #menu-lateral {
   display: none;
   position: fixed;
