@@ -31,11 +31,16 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -59,8 +64,14 @@
           <h5>ESPECIALIDADES</h5>
         </div>
       </div>
+      <a href="./src/loginPage/index.html"></a>
       <div class="btn_marcar">
-        <div class="btn_marcarConsulta"></div>
+        <div class="btn_marcarConsulta">
+          <button onclick="url()" id="btn_Consult">
+            MARQUE SUA<br />
+            CONSULTA
+          </button>
+        </div>
       </div>
       <div class="pai" onclick="toggleMenu()">
         <div class="filha"></div>
@@ -84,40 +95,89 @@
       </div>
     </div>
 
-    <div id="form-container">
-      <form id="login-form">
-        <!-- LEAGUE SPARTAN -->
-        <h2 id="login">FAÇA SEU LOGIN</h2>
-        <div class="icons">
-          <span class="material-symbols-outlined"> person </span>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="E-Mail:"
-            required
-          />
+    <div id="Container">
+      <div class="img">
+        <img
+          src="./assets/imagem com texto carrossel 1 (1).png"
+          style="height: 70.5vh; width: 100%; opacity: calc(95%);"
+          alt=""
+        /><br />
+      </div>
+    </div>
+    <div class="meio">
+      <div class="text">
+        <h1>
+          SERVIÇOS <br />
+          OFERTADOS
+        </h1>
+        <h4>Mais de 10 especialidades</h4>
+      </div>
+      <div class="boxs">
+        <div class="carrossel">
+          <div class="session-1">
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              stethoscope
+              </span><br />
+              CLINICO GERAL</button>
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              child_care
+              </span><br />
+              PEDIATRIA</button><br /><br />
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              nutrition
+              </span><br/>
+                NUTRIÇÃO</button>
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              woman
+              </span><br />
+              GINECOLOGIA</button>
+            </div>
+          <div class="session-2">
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              ophthalmology
+              </span><br />
+              OFTAMOLOGIA </button>
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              neurology
+              </span><br />
+              NEUROCIRURGIA</button><br /><br />
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              cognition
+              </span><br/>
+               PSIQUIATRIA</button>
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              man_4
+              </span><br />
+              UROLOGIA</button>
+          </div>
+          <div class="session-3">
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              ecg_heart
+              </span><br />
+              CARDIOLOGIA</button>
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              immunology
+              </span><br />
+              ALERGOLOGIA</button><br /><br />
+            <button style="font-size: 3.5vh; font-weight: 700;""><span class="material-symbols-outlined">
+              gastroenterology
+              </span><br/>
+               GASTROENTEROLOGIA</button>
+            <button style="font-size: 3.5vh; font-weight: 700;"><span class="material-symbols-outlined">
+              woman
+              </span><br />
+              DERMATOLOGIA</button>
+          </div>
         </div>
-        <div class="icons">
-          <span class="material-symbols-outlined"> lock </span>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Senha:"
-            required
-          />
-          <span class="lnr lnr-eye"></span>
-        </div>
-        <a href="./src/singUpPage/singUp.html">Ainda não se inscreveu ?</a>
 
-        <input type="submit" name="btn" id="btn" value="ENTRAR" />
-      </form>
+      </div>
+      <div class="balls">
+        <div id="ball-1"></div>
+        <div id="ball-2"></div>
+        <div id="ball-3"></div>
+      </div>
     </div>
 
-    <div id="imagem"></div>
-
-    <!-- test -->
     <footer>
       <img src="./assets/Mais Brasil Logo.png" alt="" />
       <div class="feet">
@@ -158,6 +218,6 @@
         </div>
       </div>
     </footer>
-    <script src="scripts_login.js"></script>
+    <script src="script_ladding.js"></script>
   </body>
 </html>

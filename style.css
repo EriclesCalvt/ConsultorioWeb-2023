@@ -2,8 +2,8 @@
   padding: 0px;
   margin: 0px;
 }
+
 body {
-  width: 100%;
   background-color: #edf8f7;
 }
 @keyframes slide-in-right {
@@ -12,6 +12,14 @@ body {
   }
   to {
     transform: translateX(0);
+  }
+}
+@keyframes slide-in-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
   }
 }
 
@@ -62,130 +70,22 @@ body {
 .hidden {
   display: none;
 }
-
-#signup-form {
-  display: none;
-}
-
-#form-container {
-  transition: transform 1s ease-in-out;
-}
-
-#form-container.flip {
-  transform: rotateY(180deg);
-}
-
-.movimentacao {
-  display: flex;
-  flex-direction: column;
-  width: 8vw;
-  gap: 20px;
-  font-weight: 600;
-  position: absolute;
-  top: 100%;
-  margin-top: 20px;
-}
-.abrirMenu {
-  width: 150px;
-  background-color: #629fb6;
-}
-#form-container {
-  margin: 0;
-  padding: 0;
+#Container {
   display: flex;
   flex: 1;
   justify-content: center;
   padding-top: 100px;
-}
-#login-form {
-  height: 330px;
-  background-color: white;
-  padding: 60px;
-  display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  /*não quebra linha*/
-  white-space: nowrap;
-  border-radius: 30px;
-  flex: 0;
 }
-#signup-form {
-  display: none;
-  min-height: 330px;
-  background-color: white;
-  padding: 60px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  /*não quebra linha*/
-  white-space: nowrap;
-  border-radius: 30px;
-  flex: 0;
+.material-symbols-outlined {
+  font-size: 10vh;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
-form#login-form {
-  box-shadow: 10px 5px 15px rgb(209, 209, 209);
-  height: 45vh;
-}
-#login-form h2 {
-  margin-bottom: 40px;
-  color: #21506b;
-  font-family: "League Spartan", sans-serif;
-}
-#login-form input[type="email"],
-input[type="password"], input[type="text"] {
-  padding: 10px 5px;
-  border: none;
-  height: 4vh;
-  width: 11vw;
-  background-color: #edf8f7;
-  border-radius: 50px;
-  outline: 0;
-}
-#login-form input[type="submit"] {
-  margin-top: 25px;
-  border: none;
-  border-radius: 50px;
-  background-color: #629fb6;
-  cursor: pointer;
-  padding: 25px;
-  width: 11vw;
-  font-size: 25px;
-  font-family: "League Spartan", sans-serif;
-  color: white;
-}
-form#signup-form {
-  box-shadow: 10px 5px 15px rgb(209, 209, 209);
-  height: 45vh;
-}
-#signup-form h2 {
-  margin-bottom: 40px;
-  color: #21506b;
-  font-family: "League Spartan", sans-serif;
-}
-#signup-form input[type="email"],
-input[type="password"] {
-  padding: 10px 5px;
-  border: none;
-  height: 4vh;
-  width: 11vw;
-  background-color: #edf8f7;
-  border-radius: 50px;
-  outline: 0;
-}
-#signup-form input[type="submit"] {
-  margin-top: 25px;
-  border: none;
-  border-radius: 50px;
-  background-color: #629fb6;
-  cursor: pointer;
-  padding: 25px;
-  width: 11vw;
-  font-size: 25px;
-  font-family: "League Spartan", sans-serif;
-  color: white;
-}
+
 #header {
   background-color: white;
   font-family: "Noto Serif Ahom", serif;
@@ -200,59 +100,6 @@ input[type="password"] {
 #header h5 {
   font-family: "Bebas Neue", cursive;
 }
-
-nav {
-  display: none;
-}
-nav a {
-  text-decoration: none;
-}
-.main-container {
-  perspective: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#login-form {
-  position: relative;
-  transition: 0.8s ease-in;
-  transform-style: preserve-3d;
-  transform-origin: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#signup-form {
-  position: relative;
-  transition: 0.8s ease-in;
-  transform-style: preserve-3d;
-  transform-origin: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.face-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.face-b {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#login-form a {
-  color: #629fb6;
-  font-family: "League Spartan", sans-serif;
-  display: flex;
-  justify-content: center;
-}
-#signup-form a {
-  color: #629fb6;
-  font-family: "League Spartan", sans-serif;
-  display: flex;
-  justify-content: center;
-}
 .icons {
   color: #073c3d;
   background-color: #edf8f7;
@@ -263,15 +110,6 @@ nav a {
   justify-content: center;
   border-radius: 50px;
 }
-
-
-.lnr-eye {
-  position: relative;
-  right: 20px;
-  
-  cursor: pointer;
-}
-
 #header img {
   height: 120px;
 }
@@ -309,7 +147,6 @@ nav a {
   margin-right: 30px;
   gap: 10px;
   cursor: pointer;
-  position: relative;
 }
 .filha {
   border-radius: 30px;
@@ -317,6 +154,92 @@ nav a {
   height: 10%;
   background-color: #629fb6;
 }
+.meio {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.text h1 {
+  color: #629fb6;
+  font-size: 90px;
+}
+.text {
+  margin-left: 3vw;
+  font-family: "League Spartan", sans-serif;
+}
+.text h4 {
+  font-size: 28px;
+}
+
+.boxs button {
+  margin: 0.5vw;
+  background-color: #629fb6;
+  height: 19vh;
+  width: 19vw;
+  font-family: "League Spartan", sans-serif;
+  border: none;
+  color: white;
+  font-weight: 400;
+  border-radius: 35px;
+  font-weight: 800;
+  font-size: 40px;
+}
+.boxs {
+  width: 100vw;
+  overflow: hidden;
+  padding-left: 15vw;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carrossel > div {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Define a posição e tamanho de cada sessão */
+.session-1 {
+  order: 1;
+}
+
+.session-2 {
+  order: 2;
+}
+
+.session-3 {
+  order: 3;
+}
+/* Estilo para as bolinhas */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+.ball-1 {
+  height: 20px;
+  background-color: #629fb6;
+}
+
 footer {
   padding-bottom: 200px;
   display: flex;
@@ -398,4 +321,8 @@ li {
   margin-top: 25px;
   cursor: pointer;
   margin-left: 500px;
+}
+#Container img {
+  height: 90vh;
+  width: 100%;
 }
