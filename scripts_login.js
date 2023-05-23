@@ -32,12 +32,12 @@ async function handleSubmit(e) {
     if (email == "ericlesprogrammer@gmail.com") {
       alert("Bem vindo ADM 😎");
       setTimeout(() => {
-        window.location.href = "../crudMED/crud_MED.html";
+        window.location.href = "./src/crudMED/crud_MED.html";
       }, 500);
     } else {
       alert("Bem vindo ! ✅");
       setTimeout(() => {
-        window.location.href = "../consultsPages/home_User/home_User.html";
+        window.location.href = "./src/consultsPages/home_User/home_User.html";
       }, 500);
     }
   } else {
