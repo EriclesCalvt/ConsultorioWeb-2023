@@ -3,7 +3,7 @@ document.querySelector("#alterarDados").addEventListener("click", ()=> {
 })
 document.querySelector("#sairDaConta").addEventListener("click", ()=> {
   setInterval(()=> {
-    window.location.href = "../../../loginPage/Login.html"
+    window.location.href = "../../../loginPage/index.html"
   }, 300)
   alert("Usuário desconectado!")
 })

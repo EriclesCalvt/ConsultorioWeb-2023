@@ -67,47 +67,55 @@
     </div>
 <!--  -->
 
-    <div class="all-div">
-      <div class="div-Conteiner">
-        <div id="Container">
+<div class="all-div">
+  <div class="div-Conteiner">
+    <div id="Container">
 
-          <div class="selectt">
-            <select id="select" onclick="valorMED(this.value)">
-              <option value=""></option>
-              <option value="Médicos">Médicos</option>
-              <option value="Pacientes">Pacientes</option>
-              <option value="Serviços">Serviços</option>
-            </select>
-          </div>
-        </div>
-        <div class="crud-MED">
- 
-          <table class="table">
-              <form id="Crud">
-              <tr id="mains-tr">
-                <td>CPF</td>
-                <td>NOME</td>
-                <td>DATA NASCIMENTO</td>
-                <td>ESPECIALIDADES</td>
-                <td>CRM</td>
-                <td>AÇÃO</td>
-                <td>AÇÃO</td>
-              </tr>
-              <tr>
-                <td class="td-main"><input type="text" id="CpfInput"></td>
-                <td class="td-main"><input type="text" id="NameInput"></td>
-                <td class="td-main"><input type="date" id="DataInput"></td>
-                <td class="td-main"><input type="text" id="EspecialidadeInput"></td>
-                <td class="td-main"><input type="text" id="CrmInput"></td>
-                <td class="td-main"><a href="#">ATUALIZAR</td>
-                <td class="td-main"><a href="#">EXCLUIR</a></td>
-                <input type="submit" value="+ ADICIONAR" id="btnADC">
-              </tr>
-              </table>
-          </form>
-        </div>
-        </div>
+      <div class="selectt">
+        <select id="select" onclick="valorMED(this.value)">
+          <option value=""></option>
+          <option value="Médicos">Médicos</option>
+          <option value="Pacientes">Pacientes</option>
+          <option value="Serviços">Serviços</option>
+        </select>
       </div>
+    </div>
+    <div class="crud-MED">
+
+      <table class="table">
+        <form id="Crud">
+          <tr id="mains-tr">
+            <td>CPF</td>
+            <td>NOME</td>
+            <td>DATA NASCIMENTO</td>
+            <td>ESPECIALIDADES</td>
+            <td>CRM</td>
+            <td>AÇÃO</td>
+            <td>AÇÃO</td>
+          </tr>
+          <tr>
+            <td class="td-main"><input type="text" id="CpfInput"></td>
+            <td class="td-main"><input type="text" id="NameInput"></td>
+            <td class="td-main"><input type="date" id="DataInput"></td>
+            <td class="td-main"><input type="text" id="EspecialidadeInput"></td>
+            <td class="td-main"><input type="text" id="CrmInput"></td>
+            <td class="td-main"><a href="#">ATUALIZAR</td>
+            <td class="td-main"><a href="#">EXCLUIR</a></td>
+            <input type="submit" value="+ ADICIONAR" id="btnADC">
+          </tr>
+        </table>
+      </form>
+
+      <!-- Novo elemento para as tabelas geradas dinamicamente -->
+      <div id="dynamicTables-Main">
+        <div id="dynamicTables"></div>
+      </div>
+ 
+      
+    </div>
+  </div>
+</div>
+
 
     <footer>
       <img src="../../assets/Mais Brasil Logo.png" alt="" />

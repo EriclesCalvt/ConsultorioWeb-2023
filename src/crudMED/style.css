@@ -13,7 +13,12 @@ body {
 .crud-MED {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   min-height: 30vh;
+}
+.all-div{
+  display: flex;
+  justify-content: center;
 }
 #Container button {
   height: 8vh;
@@ -66,8 +71,30 @@ body {
   align-items: flex-start;
   padding-left: 1vw;
 }
+#dynamicTables-Main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#dynamicTables{
+  background-color: #333;
+  color: white;
+  width: 41%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#dynamicTables table th{
+  background-color: #629fb6;
+}
+#dynamicTables table td{
+  background-color: rgb(178, 162, 250)
+}
 #btnADC{
   height: 20px;
+  width: 10vw;
 }
 .crud-SERV {
   display: flex;
