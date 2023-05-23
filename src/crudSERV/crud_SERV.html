@@ -77,11 +77,12 @@
               <option value="Serviços">Serviços</option>
             </select>
           </div>
-          <button type="submit" id="btn_ADICIONAR">+ ADICIONAR</button>
+          <!-- <button type="submit" >+ ADICIONAR</button> -->
       </div>
         <div class="crud-SERV">
           <div>
             <table class="table">
+              <form id="Form-Serv">
               <tr id="mains-tr">
                 <td>NOME</td>
                 <td>HORARIOS</td>
@@ -91,37 +92,15 @@
                 <td>AÇÃO</td>
               </tr>
               <tr>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="date"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><a href="#">ATUALIZAR</td>
-                <td class="td-main"><a href="#">EXCLUIR</a></td>
+                  <td class="td-main"><input type="text" id="nomeForm"></td>
+                  <td class="td-main"><input type="text" id="horarioForm"></td>
+                  <td class="td-main"><input type="date" id="dataForm"></td>
+                  <td class="td-main"><input type="text" id="nomepacienteForm"></td>
+                  <td class="td-main"><a href="#">ATUALIZAR</td>
+                  <td class="td-main"><a href="#">EXCLUIR</a></td>
+                  <input type="submit" value="+ ADICIONAR" id="btn_ADICIONAR">
               </tr>
-              <tr>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="date"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><a href="#">ATUALIZAR</td>
-                <td class="td-main"><a href="#">EXCLUIR</a></td>
-              </tr>
-              <tr>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="date"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><a href="#">ATUALIZAR</td>
-                <td class="td-main"><a href="#">EXCLUIR</a></td>
-              </tr>
-              <tr>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><input type="date"></td>
-                <td class="td-main"><input type="text"></td>
-                <td class="td-main"><a href="#">ATUALIZAR</td>
-                <td class="td-main"><a href="#">EXCLUIR</a></td>
-              </tr>
+            </form>
             </table>
           </div>
         </div>

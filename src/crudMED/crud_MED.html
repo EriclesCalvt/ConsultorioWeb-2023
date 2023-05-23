@@ -70,6 +70,7 @@
     <div class="all-div">
       <div class="div-Conteiner">
         <div id="Container">
+
           <div class="selectt">
             <select id="select" onclick="valorMED(this.value)">
               <option value=""></option>
@@ -80,8 +81,9 @@
           </div>
         </div>
         <div class="crud-MED">
-          <form id="Crud" method="POST">
-            <table class="table">
+ 
+          <table class="table">
+              <form id="Crud">
               <tr id="mains-tr">
                 <td>CPF</td>
                 <td>NOME</td>
@@ -99,8 +101,8 @@
                 <td class="td-main"><input type="text" id="CrmInput"></td>
                 <td class="td-main"><a href="#">ATUALIZAR</td>
                 <td class="td-main"><a href="#">EXCLUIR</a></td>
-                  
-                </tr>
+                <input type="submit" value="+ ADICIONAR" id="btnADC">
+              </tr>
               </table>
           </form>
         </div>

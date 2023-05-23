@@ -66,6 +66,9 @@ body {
   align-items: flex-start;
   padding-left: 1vw;
 }
+#btnADC{
+  height: 20px;
+}
 .crud-SERV {
   display: flex;
 }

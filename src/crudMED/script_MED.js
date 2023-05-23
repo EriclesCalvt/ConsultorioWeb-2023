@@ -21,32 +21,39 @@ function valorMED(value) {
   }
 }
 
-document.querySelector("#btn_ADICIONAR").addEventListener("submit", (e) => {
-  e.preventDefault;
-  alert("oi");
-})
+const formServ = document.getElementById('Crud');
+formServ.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const Name = document.querySelector('#NameInput').value
+  const cpf = document.querySelector('#CpfInput').value
+  const crm = document.querySelector('#CrmInput').value
+  const DataNascimento = document.querySelector('#DataInput').value
+  const Especialidade = document.querySelector('#EspecialidadeInput').value
 
-//Envio a API:
-const btnSalvar = document.getElementById("btn_ADICIONAR");
-btnSalvar.addEventListener("click", function () {
-  const medico = {
-    Name: document.getElementById("NameInput").value,
-    cpf: document.getElementById("CpfInput").value,
-    crm: document.getElementById("CrmInput").value,
-    DataNascimento: document.getElementById("DataInput").value,
-    Especialidade: document.getElementById("EspecialidadeInput").value,
-  };
+  const dados = {
+    Name,
+    cpf,
+    crm,
+    DataNascimento,
+    Especialidade,
+  }
 
-  fetch("http://localhost:3000/doctors/Insert", {
+  fetch('http://localhost:3000/Doctor/Insert', {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(medico),
+    body: JSON.stringify(dados),
   })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
-});
-
-
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    setInterval(()=> {
+      alert("CADASTRADO COM SUCESSO !")
+      window.location.href = "../crudMED/crud_MED.html";
+    }, 2000)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
