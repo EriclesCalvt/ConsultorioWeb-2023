@@ -1,3 +1,10 @@
+const isAuthenticated = document.cookie // Verificando se o cookie de autenticação existe
+  .split("; ")
+  .find((row) => row.startsWith("token.auth="))
+  ?.split("=")[1];
+
+if (!isAuthenticated) window.location.replace = "../../loginPage/index.html"
+
 function run(doctorName) {
   // Verifica se o nome do médico foi passado como argumento
   if (doctorName) {

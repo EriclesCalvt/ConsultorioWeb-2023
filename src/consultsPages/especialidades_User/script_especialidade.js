@@ -1,3 +1,10 @@
+const isAuthenticated = document.cookie // Verificando se o cookie de autenticação existe
+  .split("; ")
+  .find((row) => row.startsWith("token.auth="))
+  ?.split("=")[1];
+
+if (!isAuthenticated) window.location.replace = "../../loginPage/index.html"
+
 const buttons$ = document.getElementsByClassName("especialitys");
 
 const especialitysBtns = document.getElementsByClassName("especialitys");
