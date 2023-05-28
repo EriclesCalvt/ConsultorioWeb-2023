@@ -2,6 +2,38 @@
   padding: 0px;
   margin: 0px;
 }
+.dynamic-table {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.dynamic-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dynamic-table-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #629fb6;
+  width: 100%;
+  text-align: center;
+}
+
+.dynamic-table-cell {
+  background-color: rgb(178, 162, 250);
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+}
+
 body {
   background-color: #edf8f7;
 }
