@@ -81,3 +81,99 @@ function valorPAC(value) {
       break;
   }
 }
+
+
+// Função para buscar os dados da API
+fetch("http://localhost:3000/Products")
+  .then((response) => response.json())
+  .then((data) => {
+    // Chamar a função para criar a tabela com os dados dos produtos
+    createProductsTable(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+// Função para criar a tabela com os dados dos produtos
+function createProductsTable(products) {
+  const table = document.createElement("table");
+  table.classList.add("table");
+
+  // Cabeçalho da tabela
+  const headerRow = document.createElement("tr");
+  const headers = [
+    "CPF",
+    "RG",
+    "NASC",
+    "NOME",
+    "Nº CASA",
+    "RUA",
+    "NOME BAIRRO",
+    "CIDADE",
+    "CEP",
+    "TELEFONE",
+    "CONSULTA",
+  ];
+  headers.forEach((headerText) => {
+    const header = document.createElement("th");
+    header.textContent = headerText;
+    headerRow.appendChild(header);
+  });
+  table.appendChild(headerRow);
+
+  // Linhas da tabela com os dados dos produtos
+  products.forEach((product) => {
+    const row = document.createElement("tr");
+
+    const cpfCell = document.createElement("td");
+    cpfCell.textContent = product.Cpf;
+    row.appendChild(cpfCell);
+
+    const rgCell = document.createElement("td");
+    rgCell.textContent = product.Rg;
+    row.appendChild(rgCell);
+
+    const dataNascimentoCell = document.createElement("td");
+    dataNascimentoCell.textContent = product.Nascimento;
+    row.appendChild(dataNascimentoCell);
+
+    const nomeCell = document.createElement("td");
+    nomeCell.textContent = product.NomeProduct;
+    row.appendChild(nomeCell);
+
+    const numeroCasaCell = document.createElement("td");
+    numeroCasaCell.textContent = product.NumeroCasa;
+    row.appendChild(numeroCasaCell);
+
+    const ruaCell = document.createElement("td");
+    ruaCell.textContent = product.Rua;
+    row.appendChild(ruaCell);
+
+    const bairroCell = document.createElement("td");
+    bairroCell.textContent = product.Bairro;
+    row.appendChild(bairroCell);
+
+    const cidadeCell = document.createElement("td");
+    cidadeCell.textContent = product.Cidade;
+    row.appendChild(cidadeCell);
+
+    const cepCell = document.createElement("td");
+    cepCell.textContent = product.Cep;
+    row.appendChild(cepCell);
+
+    const telefoneCell = document.createElement("td");
+    telefoneCell.textContent = product.Telefone;
+    row.appendChild(telefoneCell);
+
+    const consultaCell = document.createElement("td");
+    consultaCell.textContent = product.Consulta;
+    row.appendChild(consultaCell);
+
+    table.appendChild(row);
+  });
+
+
+  // Adicionar a tabela ao elemento com o id "dynamicTables"
+  const dynamicTablesDiv = document.getElementById("dynamicTables");
+  dynamicTablesDiv.appendChild(table);
+}

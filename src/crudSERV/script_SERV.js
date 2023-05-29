@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const headerRow = document.createElement('tr');
       headerRow.classList.add('dynamic-table-row');
-      const headers = ['NOME', 'HORARIOS', 'DATA', 'NOME DO PACIENTE'];
+      const headers = ['SERVIÇOS', 'HORARIO', 'DATA', 'NOME'];
       headers.forEach(headerText => {
         const th = document.createElement('th');
         th.textContent = headerText;

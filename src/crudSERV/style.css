@@ -18,8 +18,6 @@
 
 .dynamic-table-header {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   background-color: #629fb6;
   width: 100%;
   text-align: center;
