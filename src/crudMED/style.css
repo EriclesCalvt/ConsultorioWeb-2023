@@ -78,8 +78,8 @@ body {
   text-align: center;
 }
 #dynamicTables{
-  background-color: #333;
-  color: white;
+  /* background-color: #333; */
+  /* color: white; */
   width: 41%;
   display: flex;
   justify-content: center;
