@@ -1,3 +1,11 @@
+const isAuthenticated = document.cookie // Verificando se o cookie de autenticação existe
+  .split("; ")
+  .find((row) => row.startsWith("token.auth="))
+  ?.split("=")[1];
+
+if (!isAuthenticated) window.location.replace = "../../loginPage/index.html"
+
+
 const confirmationBtns = document.getElementsByClassName("confirmation");
 
 for (let i = 0; i < confirmationBtns.length; i++) {

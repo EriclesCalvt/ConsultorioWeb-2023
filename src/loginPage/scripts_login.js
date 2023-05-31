@@ -16,20 +16,38 @@ async function handleSubmit(e) {
   const password = passwordInput.value;
 
   // enviar os dados de login para o servidor
-  const response = await fetch("http://localhost:3000/User", {
+  const response = await fetch("http://localhost:3000/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ email: email, password: password}),
   });
-
   // verificar se o login foi bem-sucedido ou não
   const data = await response.json();
 
-  if (data.message == "ok") {
+  console.log(data)
+
+  // Crie um objeto Date com a data atual
+  var date = new Date();
+
+  // Obtenha o valor em milissegundos da date atual
+  var valorEmMilissegundos = date.getTime();
+
+  // Adicione duas horas em milissegundos (2 horas * 60 minutos * 60 segundos * 1000 milissegundos)
+  var valorAtualizado = valorEmMilissegundos + (2 * 60 * 60 * 1000);
+
+  // Atribua o novo valor atualizado ao objeto Date
+  date.setTime(valorAtualizado);
+
+  console.log(date)
+
+  document.cookie += `token.auth=${data.token}; expires=${date}` // Colocando o token nos cookies
+
+  if (data) { // nome=valor
+
     // o login foi bem-sucedido, redirecionar para a página desejada
-    if (email == "ericlesprogrammer@gmail.com") {
+    if (email == "ericlesprogrammer@gmail.com" && password == "14082005programmer") {
       alert("Bem vindo ADM 😎");
       setTimeout(() => {
         window.location.href = "../crudMED/crud_MED.html";

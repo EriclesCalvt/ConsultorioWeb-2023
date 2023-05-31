@@ -1,3 +1,11 @@
+const isAuthenticated = document.cookie // Verificando se o cookie de autenticação existe
+  .split("; ")
+  .find((row) => row.startsWith("token.auth="))
+  ?.split("=")[1];
+
+if (!isAuthenticated) window.location.replace = "../loginPage/index.html"
+
+//Envio de dados a API
 const formServ = document.getElementById('Form-Serv');
 formServ.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -33,6 +41,7 @@ formServ.addEventListener('submit', (event) => {
   })
 })
 
+//Troca de paginas pelo Select
 function valorSERV(value) {
   switch (value) {
     case "Médicos":
@@ -52,3 +61,44 @@ function valorSERV(value) {
       break;
   }
 }
+
+
+// Requisição GET para obter os dados dos servicos da API
+document.addEventListener('DOMContentLoaded', () => {
+  const divCrudServ = document.querySelector('.crud-SERV');
+  const dynamicTableContainer = document.getElementById('dynamic-table-container');
+
+  fetch('http://localhost:3000/Services')
+    .then(response => response.json())
+    .then(data => {
+      const newTable = document.createElement('table');
+      newTable.classList.add('dynamic-table');
+
+      const headerRow = document.createElement('tr');
+      headerRow.classList.add('dynamic-table-row');
+      const headers = ['SERVIÇOS', 'HORARIO', 'DATA', 'NOME'];
+      headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        th.classList.add('dynamic-table-header');
+        headerRow.appendChild(th);
+      });
+      newTable.appendChild(headerRow);
+
+      data.forEach(item => {
+        const row = document.createElement('tr');
+        row.classList.add('dynamic-table-row');
+        const columns = [item.Nome, item.Horarios, item.Data, item.NomePaciente];
+        columns.forEach(columnText => {
+          const td = document.createElement('td');
+          td.textContent = columnText;
+          td.classList.add('dynamic-table-cell');
+          row.appendChild(td);
+        });
+        newTable.appendChild(row);
+      });
+
+      dynamicTableContainer.appendChild(newTable);
+    })
+    .catch(error => console.error('Erro ao fazer a solicitação:', error));
+});
