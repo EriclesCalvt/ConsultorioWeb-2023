@@ -1,11 +1,7 @@
 // selecionar o formulário de login e escutar o evento de submit
 const btn = document.getElementById("btn");
 const form = document.querySelector("#Formulario");
-btn.addEventListener("click", handleSubmit);
-
-/*document.getElementById("Whatsapp").addEventListener("click", () => {
-  window.location.href = "https://wa.me/5585991985991";
-});*/
+btn.addEventListener("click", (e) => handleSubmit(e));
 
 async function handleSubmit(e) {
   e.preventDefault();
@@ -15,6 +11,8 @@ async function handleSubmit(e) {
   const email = emailInput.value;
   const password = passwordInput.value;
 
+  if (!email || !password) return alert("Preencha")
+
   // enviar os dados de login para o servidor
   const response = await fetch("http://localhost:3000/auth/login", {
     method: "POST",
@@ -23,27 +21,11 @@ async function handleSubmit(e) {
     },
     body: JSON.stringify({ email: email, password: password}),
   });
+
+
   // verificar se o login foi bem-sucedido ou não
   const data = await response.json();
-
   console.log(data)
-
-  // Crie um objeto Date com a data atual
-  var date = new Date();
-
-  // Obtenha o valor em milissegundos da date atual
-  var valorEmMilissegundos = date.getTime();
-
-  // Adicione duas horas em milissegundos (2 horas * 60 minutos * 60 segundos * 1000 milissegundos)
-  var valorAtualizado = valorEmMilissegundos + (2 * 60 * 60 * 1000);
-
-  // Atribua o novo valor atualizado ao objeto Date
-  date.setTime(valorAtualizado);
-
-  console.log(date)
-
-  document.cookie += `token.auth=${data.token}; expires=${date}` // Colocando o token nos cookies
-
   if (data) { // nome=valor
 
     // o login foi bem-sucedido, redirecionar para a página desejada
@@ -62,7 +44,25 @@ async function handleSubmit(e) {
     // o login falhou, mostrar uma mensagem de erro
     alert(data.message);
   }
+  // Crie um objeto Date com a data atual
+  var date = new Date();
+  
+  // Obtenha o valor em milissegundos da date atual
+  var valorEmMilissegundos = date.getTime();
+  
+  // Adicione duas horas em milissegundos (2 horas * 60 minutos * 60 segundos * 1000 milissegundos)
+  var valorAtualizado = valorEmMilissegundos + (2 * 60 * 60 * 1000);
+  
+  // Atribua o novo valor atualizado ao objeto Date
+  date.setTime(valorAtualizado);
+  
+  console.log(date)
+  
+  document.cookie += `token.auth=${data.token}; expires=${date.toUTCString()}` // Colocando o token nos cookies
 }
+
+
+
 
 function toggleMenu() {
   var menu = document.getElementById("menu-lateral");

@@ -1,9 +1,9 @@
-const isAuthenticated = document.cookie // Verificando se o cookie de autenticação existe
+const isAuthenticated = document.cookie
   .split("; ")
   .find((row) => row.startsWith("token.auth="))
   ?.split("=")[1];
 
-if (!isAuthenticated) window.location.replace = "../../loginPage/index.html"
+if (!isAuthenticated) return window.location.replace("../../loginPage/index.html")
 
 const urlRote$ = document.getElementById("urlRote");
 
