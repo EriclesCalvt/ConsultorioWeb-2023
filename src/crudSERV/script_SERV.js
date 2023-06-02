@@ -105,24 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //delete services
 document.getElementById('deleteServices').addEventListener('click', async () => {
-  const valueAlert = prompt("Insira o nome do serviço:")
-  console.log(valueAlert)
-  const serviceName = valueAlert; // Nome do serviço que deseja deletar
+  const serviceName = prompt("Insira o nome do serviço:"); // Nome do serviço que deseja deletar
 
   try {
-    // Obter o serviço pelo nome
+    // Obter os serviços pelo nome
     const serviceResponse = await fetch(`http://localhost:3000/Services?Nome=${serviceName}`);
     const serviceData = await serviceResponse.json();
 
+    if (!serviceName) return alert("Sem serviços inseridos");
 
-    if(!serviceName) return alert("Sem serviços inseridos")
-    
-    if (serviceData.length === 0) {
-      console.log('Serviço não encontrado');
-      return;
-    }
+    if (serviceData.length === 0) return alert('Serviço não encontrado');
 
-    const serviceId = serviceData[0]._id; // Obter o ID do serviço
+    const serviceId = await selectService(serviceData); // Obter o ID do serviço selecionado
+
+    if (!serviceId) return; // O usuário cancelou a seleção
 
     // Deletar o serviço pelo ID
     const deleteResponse = await fetch(`http://localhost:3000/Services/${serviceId}`, {
@@ -130,7 +126,10 @@ document.getElementById('deleteServices').addEventListener('click', async () => 
     });
 
     if (deleteResponse.ok) {
-      console.log('Serviço deletado com sucesso!');
+      alert(`${serviceName} foi deletado com sucesso`);
+      setTimeout(() => {
+        window.location.reload(true);
+      }, 300);
       // Faça algo adicional, se necessário
     } else {
       console.error('Falha ao deletar serviço:', deleteResponse.status);
@@ -139,6 +138,32 @@ document.getElementById('deleteServices').addEventListener('click', async () => 
     console.error('Ocorreu um erro:', error);
   }
 });
+
+function selectService(serviceData) {
+  return new Promise((resolve) => {
+    let selection = prompt(
+      `Selecione o serviço a ser deletado:\n${serviceData
+        .map((service, index) => `${index + 1}. ${service.Nome}`)
+        .join('\n')}`
+    );
+
+    if (selection === null) {
+      // O usuário cancelou a seleção
+      resolve(null);
+      return;
+    }
+
+    selection = parseInt(selection, 10);
+    if (isNaN(selection) || selection < 1 || selection > serviceData.length) {
+      alert('Seleção inválida. Tente novamente.');
+      resolve(selectService(serviceData));
+    } else {
+      const serviceIndex = selection - 1;
+      resolve(serviceData[serviceIndex]._id);
+    }
+  });
+}
+
 
 
 

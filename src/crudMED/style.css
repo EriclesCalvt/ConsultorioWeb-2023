@@ -140,15 +140,9 @@ body {
   align-items: center;
   text-align: center;
 }
-<<<<<<< HEAD
 #dynamicTables{
   /* background-color: #333; */
   /* color: white; */
-=======
-#dynamicTables {
-  background-color: #333;
-  color: white;
->>>>>>> d2dde763a4f806aee9cd39c5815bfe2ae6a2eddd
   width: 41%;
   display: flex;
   justify-content: center;
