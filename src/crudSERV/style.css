@@ -75,6 +75,9 @@ body {
   flex-direction: column;
   gap: 50px;
 }
+a{
+  cursor: pointer;
+}
 #button_especialidade {
   display: flex;
   flex-direction: column;

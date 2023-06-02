@@ -102,3 +102,68 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error('Erro ao fazer a solicitação:', error));
 });
+
+//delete services
+document.getElementById('deleteServices').addEventListener('click', async () => {
+  const valueAlert = prompt("Insira o nome do serviço:")
+  console.log(valueAlert)
+  const serviceName = valueAlert; // Nome do serviço que deseja deletar
+
+  try {
+    // Obter o serviço pelo nome
+    const serviceResponse = await fetch(`http://localhost:3000/Services?Nome=${serviceName}`);
+    const serviceData = await serviceResponse.json();
+
+
+    if(!serviceName) return alert("Sem serviços inseridos")
+    
+    if (serviceData.length === 0) {
+      console.log('Serviço não encontrado');
+      return;
+    }
+
+    const serviceId = serviceData[0]._id; // Obter o ID do serviço
+
+    // Deletar o serviço pelo ID
+    const deleteResponse = await fetch(`http://localhost:3000/Services/${serviceId}`, {
+      method: 'DELETE'
+    });
+
+    if (deleteResponse.ok) {
+      console.log('Serviço deletado com sucesso!');
+      // Faça algo adicional, se necessário
+    } else {
+      console.error('Falha ao deletar serviço:', deleteResponse.status);
+    }
+  } catch (error) {
+    console.error('Ocorreu um erro:', error);
+  }
+});
+
+
+
+// document.getElementById('deleteServices').addEventListener('click', async () => {
+//   const id = "6479ebe5ad8289a8f8c38de3"; // Object ID do serviço que deseja deletar
+
+//   try {
+//     const response = await fetch(`http://localhost:3000/Services/${id}`, {
+//       method: 'DELETE'
+//     });
+
+//     if (response.ok) {
+//       console.log('Serviço deletado com sucesso!');
+//       // Faça algo adicional, se necessário
+//     } else {
+//       console.error('Falha ao deletar serviço:', response.status);
+//     }
+//   } catch (error) {
+//     console.error('Ocorreu um erro:', error);
+//   }
+// });
+
+
+
+//Delete services
+document.getElementById('updateServices').addEventListener('click', () => {
+  alert("funfando")
+})
