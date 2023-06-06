@@ -1,22 +1,29 @@
-const isAuthenticated = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("token.auth="))
-  ?.split("=")[1];
+// Auth
+function createAuth(){
+  const isAuthenticated = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("token.auth="))
+    ?.split("=")[1];
+  
+  if (!isAuthenticated) {
+    return window.location.replace("../../loginPage/index.html");
+  }
+}
 
-if (!isAuthenticated) return window.location.replace("../../loginPage/index.html")
 
-const urlRote$ = document.getElementById("urlRote");
-
-urlRote$.addEventListener("click", () => {
+// Switch pages
+document.getElementById('urlRote').addEventListener("click", () => {
   window.location.href = "../dados_User/dados_User.html";
 });
 
-function settings() {
+document.getElementById('settings').addEventListener('click', ()=> {
   window.location.href = "../../Configuracao/alterarDados/loggout/index.html";
-}
-function minhaConta() {
+});
+
+document.getElementById('minhaConta').addEventListener('click', ()=> {
   window.location.href = "../minhaConta/minhaConta.html";
-}
+});
+
 function toggleMenu() {
   var menu = document.getElementById("menu-lateral");
   menu.classList.toggle("mostrar");
@@ -28,3 +35,4 @@ function toggleMenu() {
     menu.classList.remove("mostrar");
   }
 }
+

@@ -177,3 +177,64 @@ function createProductsTable(products) {
   const dynamicTablesDiv = document.getElementById("dynamicTables");
   dynamicTablesDiv.appendChild(table);
 }
+//delete services
+document.getElementById('deleteServices').addEventListener('click', async () => {
+  const pacName = prompt("Insira o nome do paciente:"); // Nome do serviço que deseja deletar
+
+  try {
+    // Obter os serviços pelo nome
+    const serviceResponse = await fetch(`http://localhost:3000/Products?NomeProduct=${pacName}`);
+    const pacData = await serviceResponse.json();
+
+    if (!pacName) return alert("Sem pacientes inseridos");
+
+    if (pacData.length === 0) return alert('Paciente não encontrado');
+
+    const pacId = await selectService(pacData); // Obter o ID do serviço selecionado
+
+    if (!pacId) return; // O usuário cancelou a seleção
+
+    // Deletar o serviço pelo ID
+    const deleteResponse = await fetch(`http://localhost:3000/Products/${pacId}`, {
+      method: 'DELETE'
+    });
+
+    if (deleteResponse.ok) {
+      alert(`${pacName} foi deletado com sucesso`);
+      setTimeout(() => {
+        window.location.reload(true);
+      }, 300);
+      // Faça algo adicional, se necessário
+    } else {
+      console.error('Falha ao deletar paciente:', deleteResponse.status);
+    }
+  } catch (error) {
+    console.error('Ocorreu um erro:', error);
+  }
+});
+
+function selectService(pacData) {
+  return new Promise((resolve) => {
+    let selection = prompt(
+      `Selecione o serviço a ser deletado:\n${pacData
+        .map((pac, index) => `${index + 1}. ${pac.NomeProduct}`)
+        .join('\n')}`
+    );
+
+    if (selection === null) {
+      // O usuário cancelou a seleção
+      resolve(null);
+      return;
+    }
+
+    selection = parseInt(selection, 10);
+    if (isNaN(selection) || selection < 1 || selection > pacData.length) {
+      alert('Seleção inválida. Tente novamente.');
+      resolve(selectService(pacData));
+    } else {
+      const pacIndex = selection - 1;
+      resolve(pacData[pacIndex]._id);
+    }
+  });
+}
+

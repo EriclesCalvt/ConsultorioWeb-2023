@@ -139,3 +139,64 @@ function createDoctorsTable(doctors) {
   const dynamicTablesDiv = document.getElementById("dynamicTables");
   dynamicTablesDiv.appendChild(table);
 }
+//delete services
+document.getElementById('deleteServices').addEventListener('click', async () => {
+  const medName = prompt("Insira o nome do médico:"); // Nome do serviço que deseja deletar
+
+  try {
+    // Obter os serviços pelo nome
+    const serviceResponse = await fetch(`http://localhost:3000/Doctor?Name=${medName}`);
+    const medData = await serviceResponse.json();
+
+    if (!medName) return alert("Sem serviços inseridos");
+
+    if (medData.length === 0) return alert('Médico não encontrado');
+
+    const medId = await selectService(medData); // Obter o ID do serviço selecionado
+
+    if (!medId) return; // O usuário cancelou a seleção
+
+    // Deletar o serviço pelo ID
+    const deleteResponse = await fetch(`http://localhost:3000/Doctor/${medId}`, {
+      method: 'DELETE'
+    });
+
+    if (deleteResponse.ok) {
+      alert(`${medName} foi deletado com sucesso`);
+      setTimeout(() => {
+        window.location.reload(true);
+      }, 300);
+      // Faça algo adicional, se necessário
+    } else {
+      console.error('Falha ao deletar serviço:', deleteResponse.status);
+    }
+  } catch (error) {
+    console.error('Ocorreu um erro:', error);
+  }
+});
+
+function selectService(medData) {
+  return new Promise((resolve) => {
+    let selection = prompt(
+      `Selecione o serviço a ser deletado:\n${medData
+        .map((med, index) => `${index + 1}. ${med.Name}`)
+        .join('\n')}`
+    );
+
+    if (selection === null) {
+      // O usuário cancelou a seleção
+      resolve(null);
+      return;
+    }
+
+    selection = parseInt(selection, 10);
+    if (isNaN(selection) || selection < 1 || selection > medData.length) {
+      alert('Seleção inválida. Tente novamente.');
+      resolve(selectService(medData));
+    } else {
+      const medIndex = selection - 1;
+      resolve(medData[medIndex]._id);
+    }
+  });
+}
+
