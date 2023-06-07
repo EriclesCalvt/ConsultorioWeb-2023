@@ -1,14 +1,13 @@
 // Auth
-function createAuth(){
   const isAuthenticated = document.cookie
-    .split("; ")
+    .split(";")
     .find((row) => row.startsWith("token.auth="))
     ?.split("=")[1];
   
   if (!isAuthenticated) {
-    return window.location.replace("../../loginPage/index.html");
+    () => return window.location.replace("../../loginPage/index.html");
   }
-}
+
 
 
 // Switch pages

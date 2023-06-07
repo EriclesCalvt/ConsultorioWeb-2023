@@ -17,9 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('http://localhost:3000/Products')
     .then(response => response.json())
     .then(data => {
-      selectSexo.innerHTML = '';
-
-      data.forEach(product => {
+      selectSexo.innerHTML = '';Nivel de relacionamento com o dono(a) desta conta
         const option = document.createElement('option');
         option.value = product._id;
         option.textContent = product.NomeProduct;
