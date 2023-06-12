@@ -25,25 +25,11 @@ async function handleSubmit(e) {
 
   // verificar se o login foi bem-sucedido ou não
   const data = await response.json();
-  console.log(data)
-  if (data) { // nome=valor
 
-    // o login foi bem-sucedido, redirecionar para a página desejada
-    if (email == "ericlesprogrammer@gmail.com" && password == "14082005programmer") {
-      alert("Bem vindo ADM 😎");
-      setTimeout(() => {
-        window.location.href = "../crudMED/crud_MED.html";
-      }, 500);
-    } else {
-      alert("Bem vindo ! ✅");
-      setTimeout(() => {
-        window.location.href = "../consultsPages/home_User/home_User.html";
-      }, 500);
-    }
-  } else {
-    // o login falhou, mostrar uma mensagem de erro
-    alert(data.message);
+  if (email == "ericlesprogrammer@gmail.com" && password == "14082005programmer") {
+    return window.location.href = "../crudMED/crud_MED.html";
   }
+
   // Crie um objeto Date com a data atual
   var date = new Date();
   
@@ -56,9 +42,9 @@ async function handleSubmit(e) {
   // Atribua o novo valor atualizado ao objeto Date
   date.setTime(valorAtualizado);
   
-  console.log(date)
-  
-  document.cookie += `token.auth=${data.token}; expires=${date.toUTCString()}` // Colocando o token nos cookies
+  document.cookie = `token.auth=${data.token}; expires=${date.toUTCString()}; path=/` // Colocando o token nos cookies
+
+  window.location.href = "../consultsPages/home_User/home_User.html";
 }
 
 

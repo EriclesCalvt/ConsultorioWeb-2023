@@ -1,14 +1,10 @@
 // Auth
   const isAuthenticated = document.cookie
-    .split(";")
+    .split("; ")
     .find((row) => row.startsWith("token.auth="))
     ?.split("=")[1];
   
-  if (!isAuthenticated) {
-    () => return window.location.replace("../../loginPage/index.html");
-  }
-
-
+  if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
 
 // Switch pages
 document.getElementById('urlRote').addEventListener("click", () => {

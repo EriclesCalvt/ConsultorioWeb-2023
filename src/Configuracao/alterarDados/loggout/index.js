@@ -5,7 +5,7 @@ document.querySelector("#alterarDados").addEventListener("click", ()=> {
 document.querySelector("#sairDaConta").addEventListener("click", () => {
   // Função para excluir um cookie pelo nome
   function deleteCookie(name) {
-    document.cookie = name + '=; expires=, 01 Jan 2000 00:00:00 UTC; path=/ConsultorioWeb-2023/src/loginPage;';
+    document.cookie = name + '=; expires=, 01 Jan 2000 00:00:00 UTC; path=/';
   }
 
   // Limpar o token dos cookies
