@@ -104,3 +104,14 @@ button.addEventListener('click', () => {
       console.error(error);
     });
 });
+
+
+document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com"
+})
+document.getElementById('footerFacebook').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com"
+})
+document.getElementById('footerInstagram').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com/cmed.especialidades"
+})

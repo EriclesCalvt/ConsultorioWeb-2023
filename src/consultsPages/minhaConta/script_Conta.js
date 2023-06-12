@@ -91,3 +91,14 @@ fetch("http://localhost:3000/Querie")
   .catch(function (error) {
     console.log(error);
   });
+
+
+document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com"
+})
+document.getElementById('footerFacebook').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com"
+})
+document.getElementById('footerInstagram').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com/cmed.especialidades"
+})

@@ -177,6 +177,10 @@ function createProductsTable(products) {
   const dynamicTablesDiv = document.getElementById("dynamicTables");
   dynamicTablesDiv.appendChild(table);
 }
+
+
+
+
 //delete services
 document.getElementById('deleteServices').addEventListener('click', async () => {
   const pacName = prompt("Insira o nome do paciente:"); // Nome do serviço que deseja deletar
@@ -238,3 +242,13 @@ function selectService(pacData) {
   });
 }
 
+
+document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com"
+})
+document.getElementById('footerFacebook').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com"
+})
+document.getElementById('footerInstagram').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com/cmed.especialidades"
+})

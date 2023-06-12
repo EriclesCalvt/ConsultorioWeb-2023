@@ -14,3 +14,13 @@ document.querySelector("#sairDaConta").addEventListener("click", () => {
   // Redirecionar para a página de login
   window.location.replace("../../../loginPage/index.html");
 });
+
+document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com"
+})
+document.getElementById('footerFacebook').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com"
+})
+document.getElementById('footerInstagram').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com/cmed.especialidades"
+})
