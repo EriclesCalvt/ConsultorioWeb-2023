@@ -9,6 +9,10 @@ document.querySelector("#CPF").addEventListener("click", () => {
   
 })
 
+
+//tratamento de data:
+// document.getElementById("Data").addEventListener('')
+
 document.querySelector(".form-user").addEventListener("submit", (e) => {
   // adicionar o envio dos dados para o localStorage
   e.preventDefault();
@@ -52,7 +56,7 @@ function toggleMenu() {
   if (mostrar === undefined) {
     menu.classList.toggle("mostrar");
   } else if (mostrar) {
-    menu.classList.add("mostrar");
+    menu.clasDatasList.add("mostrar");
   } else {
     menu.classList.remove("mostrar");
   }
@@ -73,7 +77,7 @@ telefoneInput.addEventListener('input', () => {
   telefone = telefone.replace(/^(\d{2})(\d)/g, '($1) $2'); // adiciona parênteses e espaço após os primeiros 2 dígitos
   telefone = telefone.replace(/(\d{4,5})(\d)/, '$1-$2'); // adiciona hífen após o quarto ou quinto dígito
   telefoneInput.value = telefone;
-});
+});Data
 
 
 var CEP = document.getElementById("CEP");
