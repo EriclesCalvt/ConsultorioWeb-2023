@@ -1,3 +1,10 @@
+const isAuthenticated = document.cookie
+.split("; ")
+.find((row) => row.startsWith("token.auth="))
+?.split("=")[1];
+
+if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
+
 function toggleMenu() {
   var menu = document.getElementById("menu-lateral");
   menu.classList.toggle("mostrar");
