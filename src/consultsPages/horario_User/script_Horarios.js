@@ -5,6 +5,13 @@ const isAuthenticated = document.cookie
 
 if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
 
+
+
+//validação de data:
+var dataInput = document.getElementById("DateInput");
+var dataAtual = new Date().toISOString().split("T")[0];
+dataInput.setAttribute("min", dataAtual);
+
 const confirmationBtns = document.getElementsByClassName("confirmation");
 
 for (let i = 0; i < confirmationBtns.length; i++) {

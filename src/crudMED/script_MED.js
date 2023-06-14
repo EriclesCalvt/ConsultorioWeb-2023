@@ -210,3 +210,8 @@ document.getElementById('footerFacebook').addEventListener('click', ()=> {
 document.getElementById('footerInstagram').addEventListener('click', ()=> {
   window.location.href = "https://instagram.com/cmed.especialidades"
 })
+
+// validação de datas:
+var dataInput = document.getElementById("DataInput");
+var dataAtual = new Date().toISOString().split("T")[0];
+dataInput.setAttribute("min", dataAtual)

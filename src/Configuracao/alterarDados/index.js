@@ -17,12 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('http://localhost:3000/Products')
     .then(response => response.json())
     .then(data => {
-      selectSexo.innerHTML = '';Nivel de relacionamento com o dono(a) desta conta
+      selectSexo.innerHTML = '';
+      data.forEach(account => {
         const option = document.createElement('option');
-        option.value = product._id;
-        option.textContent = product.NomeProduct;
-        selectSexo.appendChild(option);
-      });
+        option.value = account.Cpf; // Defina a propriedade correta para o ID da conta
+        option.textContent = account.NomeProduct; // Defina a propriedade correta para o nome da conta
+        selectSexo.appendChild(option);       
+      });      
     })
     .catch(error => {
       console.error('Erro ao obter os dados da API:', error);

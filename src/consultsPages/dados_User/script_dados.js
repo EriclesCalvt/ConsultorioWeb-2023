@@ -11,7 +11,10 @@ document.querySelector("#CPF").addEventListener("click", () => {
 
 
 //tratamento de data:
-// document.getElementById("Data").addEventListener('')
+var dataInput = document.getElementById("Data");
+var dataAtual = new Date().toISOString().split("T")[0];
+dataInput.setAttribute("min", dataAtual);
+
 
 document.querySelector(".form-user").addEventListener("submit", (e) => {
   // adicionar o envio dos dados para o localStorage

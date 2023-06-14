@@ -5,6 +5,21 @@ const isAuthenticated = document.cookie // Verificando se o cookie de autentica�
 
 if (!isAuthenticated) window.location.replace = "../loginPage/index.html"
 
+
+
+function toggleMenu() {
+  var menu = document.getElementById("menu-lateral");
+  menu.classList.toggle("mostrar");
+  if (mostrar === undefined) {
+    menu.classList.toggle("mostrar");
+  } else if (mostrar) {
+    menu.classList.add("mostrar");
+  } else {
+    menu.classList.remove("mostrar");
+  }
+}
+
+
 //Envio de dados a API
 const formServ = document.getElementById('Form-Serv');
 formServ.addEventListener('submit', (event) => {
@@ -203,3 +218,8 @@ document.getElementById('footerFacebook').addEventListener('click', ()=> {
 document.getElementById('footerInstagram').addEventListener('click', ()=> {
   window.location.href = "https://instagram.com/cmed.especialidades"
 })
+
+// validação de datas:
+var dataInput = document.getElementById("dataForm");
+var dataAtual = new Date().toISOString().split("T")[0];
+dataInput.setAttribute("min", dataAtual)

@@ -7,6 +7,20 @@ if (!isAuthenticated) window.location.replace = "../loginPage/index.html"
 
 
 
+function toggleMenu() {
+  var menu = document.getElementById("menu-lateral");
+  menu.classList.toggle("mostrar");
+  if (mostrar === undefined) {
+    menu.classList.toggle("mostrar");
+  } else if (mostrar) {
+    menu.classList.add("mostrar");
+  } else {
+    menu.classList.remove("mostrar");
+  }
+}
+
+
+
 let select = document.querySelector("#select");
 const selectValue = document.getElementById("select");
 console.log(selectValue.value);
@@ -252,3 +266,8 @@ document.getElementById('footerFacebook').addEventListener('click', ()=> {
 document.getElementById('footerInstagram').addEventListener('click', ()=> {
   window.location.href = "https://instagram.com/cmed.especialidades"
 })
+
+// validação de datas:
+var dataInput = document.getElementById("dataNascimento");
+var dataAtual = new Date().toISOString().split("T")[0];
+dataInput.setAttribute("min", dataAtual)
