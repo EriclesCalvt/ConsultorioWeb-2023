@@ -5,23 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputCPF = document.getElementById('CPF');
   const inputTelefone = document.getElementById('telefone');
   const inputData = document.getElementById('Data');
-  const selectSexo1 = document.getElementById('select-sexo1');
   const inputCEP = document.getElementById('CEP');
   const inputCidade = document.getElementById('cidade');
   const inputBairro = document.getElementById('bairro');
   const inputRua = document.getElementById('rua');
   const inputNumeroCasa = document.getElementById('numero-casa');
-  const inputComplemento = document.getElementById('complemento');
   const selectSexo = document.getElementById('select-sexo');
 
   fetch('http://localhost:3000/Products')
     .then(response => response.json())
     .then(data => {
       selectSexo.innerHTML = '';
-      data.forEach(account => {
+      data.forEach(product => {
         const option = document.createElement('option');
-        option.value = account.Cpf; // Defina a propriedade correta para o ID da conta
-        option.textContent = account.NomeProduct; // Defina a propriedade correta para o nome da conta
+        option.value = product.NomeProduct; // Defina  a propriedade correta para o ID da conta
+        option.textContent = product.NomeProduct; // Defina a propriedade correta para o nome da conta
         selectSexo.appendChild(option);       
       });      
     })
@@ -29,13 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Erro ao obter os dados da API:', error);
     });
 
-  selectSexo.addEventListener('change', () => {
+  selectSexo.addEventListener('change'  , () => {
     const selectedProductId = selectSexo.value;
 
     if (selectedProductId) {
       fetch(`http://localhost:3000/Products/${selectedProductId}`)
         .then(response => response.json())
         .then(product => {
+          if (data.length > 0) {
+          const product = data[0];
+          console.log(product)
           inputNome.value = product.NomeProduct;
           inputRG.value = product.Rg;
           inputCPF.value = product.Cpf;
@@ -46,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
           inputBairro.value = product.Bairro;
           inputRua.value = product.Rua;
           inputNumeroCasa.value = product.NumeroCasa;
-          inputComplemento.value = product.Complemento;
+          }else{
+            console.log("Nenhum produto encontrado")
+          }
         })
         .catch(error => {
           console.error('Erro ao obter os dados do produto:', error);
