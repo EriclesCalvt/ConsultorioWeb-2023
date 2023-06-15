@@ -1,12 +1,12 @@
 let select = document.querySelector("#select");
 const selectValue = document.getElementById("select");
 
-const isAuthenticated = document.cookie // Verificando se o cookie de autenticação existe
-  .split("; ")
-  .find((row) => row.startsWith("token.auth="))
-  ?.split("=")[1];
+const isAuthenticated = document.cookie
+.split("; ")
+.find((row) => row.startsWith("token.auth="))
+?.split("=")[1];
 
-if (!isAuthenticated) window.location.replace = "../loginPage/index.html"
+if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
 
 
 function toggleMenu() {
@@ -212,6 +212,3 @@ document.getElementById('footerInstagram').addEventListener('click', ()=> {
 })
 
 // validação de datas:
-var dataInput = document.getElementById("DataInput");
-var dataAtual = new Date().toISOString().split("T")[0];
-dataInput.setAttribute("min", dataAtual)

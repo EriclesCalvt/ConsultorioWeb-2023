@@ -317,7 +317,7 @@ footer {
   padding-bottom: 200px;
   display: flex;
   margin-top: 100px;
-  min-height: 200px;
+  min-height: 54vh;
   min-width: 200px;
   background-color: #21506b;
 }
@@ -329,7 +329,6 @@ footer img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   margin-left: 50px;
   color: white;
   font-family: "Bebas Neue", cursive;

@@ -16,15 +16,23 @@ function toggleMenu() {
     menu.classList.remove("mostrar");
   }
 }
+function displayContainer(){
+  const container =document.getElementById('Container');
+  container.style.display = "none";
+}
+
 
 //Puxar da Api
 fetch("http://localhost:3000/Querie")
   .then(function (response) {
     return response.json();
-    
   })
   .then(function (data) {
-    
+
+    if(data[0] == null) {
+      displayContainer();
+      }
+
     // Se houver consultas, crie uma nova caixa para cada consulta
     if (data.length > 0) {
       var consultasContainer = document.querySelector(".Main-box");
