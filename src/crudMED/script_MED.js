@@ -1,12 +1,15 @@
 let select = document.querySelector("#select");
 const selectValue = document.getElementById("select");
 
+
 const isAuthenticated = document.cookie
 .split("; ")
 .find((row) => row.startsWith("token.auth="))
 ?.split("=")[1];
 
-if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
+if (!isAuthenticated) window.location.replace("../loginPage/index.html");
+
+
 
 
 function toggleMenu() {

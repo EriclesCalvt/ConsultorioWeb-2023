@@ -4,6 +4,9 @@ const isAuthenticated = document.cookie
 ?.split("=")[1];
 
 if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
+
+
+
 const urlRote$ = document.getElementById("urlRote");
 document.querySelector("#CPF").addEventListener("click", () => {
   
