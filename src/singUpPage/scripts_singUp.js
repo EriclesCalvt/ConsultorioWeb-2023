@@ -46,33 +46,45 @@ function toggleMenu() {
 }
 
 
-let btn1 = document.querySelector('.lnr-eye-1');
-let btn2 = document.querySelector('.lnr-eye-2');
+let butn = document.querySelectorAll('.lnr-eye')[0];
 
-btn1.addEventListener('click', function () {
-  let input = document.querySelector('.password');
-  if (input.getAttribute('type') === 'password') {
+butn.addEventListener('click', function (){
+
+  let input = document.querySelector('#password')
+  
+  if(input.getAttribute('type') == 'password'){
+
     input.setAttribute('type', 'text');
-  } else {
+
+  }else{
+
     input.setAttribute('type', 'password');
+
   }
-});
-
-btn2.addEventListener('click', function () {
-  let input = document.querySelector('.password2');
-  if (input.getAttribute('type') === 'password') {
-    input.setAttribute('type', 'text');
-  } else {
-    input.setAttribute('type', 'password');
-  }
-});
-
-
-
-
-document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
-  window.location.href = "https://instagram.com"
 })
+
+let butn1 = document.querySelectorAll('.lnr-eye')[1];
+
+butn1.addEventListener('click', function (){
+  console.log('btn 1')
+  let input = document.querySelector('#password1')
+
+  if(input.getAttribute('type') == 'password'){
+
+    input.setAttribute('type', 'text');
+
+  }else{
+
+    input.setAttribute('type', 'password');
+
+  }
+})
+
+
+
+// document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
+//   window.location.href = "https://instagram.com"
+// })
 document.getElementById('footerFacebook').addEventListener('click', ()=> {
   window.location.href = "https://instagram.com"
 })
