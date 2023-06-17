@@ -18,37 +18,37 @@ document.addEventListener('DOMContentLoaded', () => {
       selectSexo.innerHTML = '';
       data.forEach(product => {
         const option = document.createElement('option');
-        option.value = product.NomeProduct; // Defina  a propriedade correta para o ID da conta
+        option.value = product.NomeProduct; // Defina a propriedade correta para o ID da conta
         option.textContent = product.NomeProduct; // Defina a propriedade correta para o nome da conta
-        selectSexo.appendChild(option);       
-      });      
+        selectSexo.appendChild(option);
+      });
     })
     .catch(error => {
       console.error('Erro ao obter os dados da API:', error);
     });
 
-  selectSexo.addEventListener('change'  , () => {
+  // Preenchimento de dados quando selecionado o option
+  selectSexo.addEventListener('change', () => {
     const selectedProductId = selectSexo.value;
 
     if (selectedProductId) {
       fetch(`http://localhost:3000/Products/${selectedProductId}`)
         .then(response => response.json())
         .then(product => {
-          if (data.length > 0) {
-          const product = data[0];
-          console.log(product)
-          inputNome.value = product.NomeProduct;
-          inputRG.value = product.Rg;
-          inputCPF.value = product.Cpf;
-          inputTelefone.value = product.Telefone;
-          inputData.value = product.Nascimento;
-          inputCEP.value = product.Cep;
-          inputCidade.value = product.Cidade;
-          inputBairro.value = product.Bairro;
-          inputRua.value = product.Rua;
-          inputNumeroCasa.value = product.NumeroCasa;
-          }else{
-            console.log("Nenhum produto encontrado")
+          if (product) {
+            console.log(product);
+            inputNome.value = product.NomeProduct;
+            inputRG.value = product.Rg;
+            inputCPF.value = product.Cpf;
+            inputTelefone.value = product.Telefone;
+            inputData.value = product.Nascimento;
+            inputCEP.value = product.Cep;
+            inputCidade.value = product.Cidade;
+            inputBairro.value = product.Bairro;
+            inputRua.value = product.Rua;
+            inputNumeroCasa.value = product.NumeroCasa;
+          } else {
+            console.log("Nenhum produto encontrado");
           }
         })
         .catch(error => {
@@ -65,17 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
       inputBairro.value = '';
       inputRua.value = '';
       inputNumeroCasa.value = '';
-      inputComplemento.value = '';
     }
   });
 });
-
-// document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
-//   window.location.href = "https://instagram.com"
-// })
-// document.getElementById('footerFacebook').addEventListener('click', ()=> {
-//   window.location.href = "https://instagram.com"
-// })
-// document.getElementById('footerInstagram').addEventListener('click', ()=> {
-//   window.location.href = "https://instagram.com/cmed.especialidades"
-// })
