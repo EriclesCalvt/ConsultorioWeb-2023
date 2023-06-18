@@ -1,3 +1,12 @@
+//autenticacao
+const isAuthenticated = document.cookie
+.split("; ")
+.find((row) => row.startsWith("token.auth="))
+?.split("=")[1];
+
+if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
+
+
 // Variáveis globais para os elementos de input e o ID selecionado
 const inputNome = document.getElementById('input-nome');
 const inputRG = document.getElementById('RG');

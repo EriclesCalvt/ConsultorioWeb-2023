@@ -8,6 +8,8 @@ if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
 function confirmation() {
   window.location.href = "../especialidades_User/especialidades.html";
 }
+
+
 //Constantes paciente:
 const name = localStorage.getItem("Nome");
 const CPF = localStorage.getItem("CPF");
