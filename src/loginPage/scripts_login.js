@@ -27,6 +27,18 @@ async function handleSubmit(e) {
   const data = await response.json();
 
   if (email == "ericlesprogrammer@gmail.com" && password == "14082005programmer") {
+    var date = new Date();
+  
+  // Obtenha o valor em milissegundos da date atual
+  var valorEmMilissegundos = date.getTime();
+  
+  // Adicione duas horas em milissegundos (2 horas * 60 minutos * 60 segundos * 1000 milissegundos)
+  var valorAtualizado = valorEmMilissegundos + (2 * 60 * 60 * 1000);
+  
+  // Atribua o novo valor atualizado ao objeto Date
+  date.setTime(valorAtualizado);
+  
+  document.cookie = `token.auth=${data.token}; SameSite=None; Secure; expires=${date.toUTCString()}; path=/` 
     return window.location.href = "../crudMED/crud_MED.html";
   }
 
@@ -42,7 +54,7 @@ async function handleSubmit(e) {
   // Atribua o novo valor atualizado ao objeto Date
   date.setTime(valorAtualizado);
   
-  document.cookie = `token.auth=${data.token}; expires=${date.toUTCString()}; path=/` // Colocando o token nos cookies
+  document.cookie = `token.auth=${data.token}; SameSite=None; Secure; expires=${date.toUTCString()}; path=/` // Colocando o token nos cookies
 
   window.location.href = "../consultsPages/home_User/home_User.html";
 }
