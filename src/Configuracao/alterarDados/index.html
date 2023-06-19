@@ -57,10 +57,25 @@
       <div class="btn_marcar">
         <div class="btn_marcarConsulta"></div>
       </div>
-      <div class="pai" onclick="menu()">
+      <div class="pai" onclick="toggleMenu()">
         <div class="filha"></div>
         <div class="filha"></div>
         <div class="filha"></div>
+      </div>
+      <div id="menu-lateral">
+        <div>
+          <a href="#" onclick="toggleMenu(false)"
+            ><img src="../../../assets/pngwing.com.png" alt="Return"
+          /></a>
+          <hr />
+          <a href="../../ContateNos/ContateNos.html" target="_blank"><strong>Sobre nós</strong></a>
+          <hr />
+          <a href="../../TrabalheConosco/TrabalheConosco.html" target="_blank"><strong>Trabalhe conosco</strong></a>
+          <hr />
+          <a href="../../ContateNos/ContateNos.html" target="_blank"><strong>Contato</strong></a>
+          <hr />
+          <img src="../../../assets/Mais Brasil Logo.png" alt="Logo" />
+        </div>
       </div>
     </div>
 
@@ -80,7 +95,7 @@
               <label for="input-nome">Nome do paciente:</label><br />
               <input type="text" id="input-nome" placeholder="Digite o nome do paciente:"/><br />
               <label for="RG">Registro geral (RG):</label><br />
-              <input type="text" id="RG" placeholder="Digite seu RG:"/><br />
+              <input type="text" id="RG" placeholder="Digite seu RG:" maxlength="12"/><br />
               <label for="CPF">Cadastro de pessoa física (CPF):</label><br />
               <input type="text" id="CPF" maxlength="14" placeholder="Digite seu CPF:"/><br />
               <label for="telefone">Telefone:</label><br />
@@ -121,7 +136,7 @@
     </div>
 
     <footer>
-      <img src="../../assets/Mais Brasil Logo.png" alt="" />
+      <img src="../../../assets/Mais Brasil Logo.png" alt="" />
       <div class="feet">
         <div class="txt1">
           <h1>INICIO</h1>

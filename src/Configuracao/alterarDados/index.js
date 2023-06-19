@@ -6,6 +6,69 @@ const isAuthenticated = document.cookie
 
 if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
 
+function toggleMenu() {
+  var menu = document.getElementById("menu-lateral");
+  menu.classList.toggle("mostrar");
+  if (mostrar === undefined) {
+    menu.classList.toggle("mostrar");
+  } else if (mostrar) {
+    menu.clasDatasList.add("mostrar");
+  } else {
+    menu.classList.remove("mostrar");
+  }
+}
+
+const cpfInput = document.getElementById('CPF');
+cpfInput.addEventListener('input', () => {
+  let cpf = cpfInput.value.replace(/\D/g, ''); // remove todos os caracteres não-numéricos
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // adiciona ponto após os primeiros 3 dígitos
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // adiciona ponto após os segundos 3 dígitos
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // adiciona hífen após os últimos 2 dígitos
+  cpfInput.value = cpf;
+});
+
+const telefoneInput = document.getElementById('telefone');
+telefoneInput.addEventListener('input', () => {
+  let telefone = telefoneInput.value.replace(/\D/g, ''); // remove todos os caracteres não-numéricos
+  telefone = telefone.replace(/^(\d{2})(\d)/g, '($1) $2'); // adiciona parênteses e espaço após os primeiros 2 dígitos
+  telefone = telefone.replace(/(\d{4,5})(\d)/, '$1-$2'); // adiciona hífen após o quarto ou quinto dígito
+  telefoneInput.value = telefone;
+});Data
+
+
+const rgInput = document.getElementById('RG');
+rgInput.addEventListener('input', () => {
+  let rg = rgInput.value.replace(/\D/g, ''); // remove todos os caracteres não-numéricos
+  rg = rg.replace(/(\d{9,10})(\d)/, '$1-$2'); // adiciona hífen após o quarto ou quinto dígito
+  rgInput.value = rg;
+});Data
+
+var CEP = document.getElementById("CEP");
+CEP.addEventListener("input", function () {
+  var cep = CEP.value;
+  if (cep.length === 8) {
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then(response => response.json())
+      .then(data => {
+        if (!data.erro) {
+          
+         
+          document.getElementById("cidade").value = data.localidade;
+         
+        } else {
+          
+          document.getElementById("cidade").value = "";
+          
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+});
+
+
+
 
 // Variáveis globais para os elementos de input e o ID selecionado
 const inputNome = document.getElementById('input-nome');

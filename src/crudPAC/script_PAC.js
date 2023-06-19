@@ -257,6 +257,10 @@ function selectService(pacData) {
 }
 
 
+document.getElementById("updateServices").addEventListener("click", () => {
+  window.location.href = "../Configuracao/alterarDados/index.html"
+})
+
 document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
   window.location.href = "https://instagram.com"
 })
