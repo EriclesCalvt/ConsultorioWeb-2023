@@ -6,7 +6,6 @@ const isAuthenticated = document.cookie
 if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
 
 
-
 const urlRote$ = document.getElementById("urlRote");
 document.querySelector("#CPF").addEventListener("click", () => {
   
@@ -106,36 +105,7 @@ CEP.addEventListener("input", function () {
   }
 });
 
-// function pad(valor) {
-//   return valor.toString().padStart(2, '0');
-// }
 
-// function formata(data) {
-//   return `${data.getFullYear()}-${pad(data.getMonth() + 1)}-${pad(data.getDate())}`;
-// }
-
-// const campo = document.querySelector('#Data');
-
-// window.addEventListener('DOMContentLoaded', function() {
-//   var data = new Date(); // data de hoje
-//   campo.min = formata(data);
-//   // 2 anos à frente
-//   data.setFullYear(data.getFullYear() + 2);
-//   campo.max = formata(data);
-// });
-
-// campo.addEventListener('input', () => {
-//   campo.setCustomValidity('');
-//   campo.checkValidity();
-// });
-
-// // campo.addEventListener('invalid', () => {
-// //   const dataDiaDeHoje = new Date(); // data de hoje
-// //   const dataSelecionada = new Date(campo.value); // data selecionada pelo usuário
-// //   const diff = Math.floor((dataSelecionada - dataDiaDeHoje) / (1000 * 60 * 60 * 24 * 365)); // diferença em anos
-
-// //   campo.setCustomValidity(`A data deve estar entre hoje e ${diff} anos à frente`);
-// // });
 
 
 document.getElementById('footerWhatsapp').addEventListener('click', ()=> {

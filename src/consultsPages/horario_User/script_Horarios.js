@@ -57,6 +57,51 @@ function toggleMenu() {
     menu.classList.remove("mostrar");
   }
 }
+function pad(valor) {
+  return valor.toString().padStart(2, '0');
+}
+
+function formata(data) {
+  return `${data.getFullYear()}-${pad(data.getMonth() + 1)}-${pad(data.getDate())}`;
+}
+
+const campo = document.querySelector('#DateInput');
+
+window.addEventListener('DOMContentLoaded', function() {
+  const data = new Date(); // data de hoje
+  campo.min = formata(data);
+  campo.max = formata(data); // define a data máxima como o dia atual
+});
+
+campo.addEventListener('input', () => {
+  campo.setCustomValidity('');
+  campo.checkValidity();
+});
+
+campo.addEventListener('invalid', () => {
+  const dataDiaDeHoje = new Date(); // data de hoje
+  const dataSelecionada = new Date(campo.value); // data selecionada pelo usuário
+
+  const anoDiaDeHoje = dataDiaDeHoje.getFullYear();
+  const mesDiaDeHoje = dataDiaDeHoje.getMonth() + 1;
+  const diaDiaDeHoje = dataDiaDeHoje.getDate();
+
+  const anoSelecionado = dataSelecionada.getFullYear();
+  const mesSelecionado = dataSelecionada.getMonth() + 1;
+  const diaSelecionado = dataSelecionada.getDate();
+
+  let diff = anoSelecionado - anoDiaDeHoje;
+  if (mesSelecionado < mesDiaDeHoje || (mesSelecionado === mesDiaDeHoje && diaSelecionado < diaDiaDeHoje)) {
+    diff--;
+  }
+
+  if (diff < 0) {
+    campo.setCustomValidity('O ano inserido não é válido. Insira um ano igual ou posterior ao atual.');
+  } else {
+    campo.setCustomValidity(`A data deve estar entre hoje e ${diff} anos à frente`);
+  }
+});
+
 
 
 document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
