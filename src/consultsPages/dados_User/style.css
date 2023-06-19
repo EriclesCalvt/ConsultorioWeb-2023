@@ -61,6 +61,9 @@ body {
 .hidden {
   display: none;
 }
+input:invalid {
+  border: red 1px solid;
+}
 #Container {
   display: flex;
   flex: 1;
