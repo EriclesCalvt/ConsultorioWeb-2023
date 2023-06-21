@@ -12,48 +12,39 @@ document.querySelector("#CPF").addEventListener("click", () => {
 })
 
 
-//tratamento de data:
 document.querySelector(".form-user").addEventListener("submit", (e) => {
-  // adicionar o envio dos dados para o localStorage
   e.preventDefault();
-  const NameInput = document.getElementById("Nome");
-  GetName = localStorage.getItem("Nome");
-  localStorage.setItem("Nome", NameInput.value);
-  NameInput.value = "";
 
-  const RgInput = document.getElementById("RG");
-  GetRg = localStorage.getItem("RG");
-  localStorage.setItem("RG", RgInput.value);
-  RgInput.value = "";
+  const NameInput = document.getElementById("Nome").value;
+  const RgInput = document.getElementById("RG").value;
+  const CpfInput = document.getElementById("CPF").value;
+  const DataInput = document.getElementById("Data").value;
 
-  const CpfInput = document.getElementById("CPF");
-  GetCpf = localStorage.getItem("CPF");
-  localStorage.setItem("CPF", CpfInput.value);
-  CpfInput.value = "";
+  if (NameInput === "" || RgInput === "" || CpfInput === "" || DataInput === "") {
+    alert("Preencha todos os campos obrigatórios.");
+    return;
+  }
 
-  const DataInput = document.getElementById("Data");
-  localStorage.setItem("Data-Nascimento", DataInput.value);
-  GetData = localStorage.getItem("Data-Nascimento");
-  console.log(GetData);
-  DataInput.value = "";
+  localStorage.setItem("Nome", NameInput);
+  localStorage.setItem("RG", RgInput);
+  localStorage.setItem("CPF", CpfInput);
+  localStorage.setItem("Data-Nascimento", DataInput);
 
   //Condicional:
-  const items = {
-    NameInput: GetName,
-    RgInput: GetRg,
-    CpfInput: GetCpf,
-    DataInput: GetData,
-  };
+  const GetName = localStorage.getItem("Nome");
+  const GetRg = localStorage.getItem("RG");
+  const GetCpf = localStorage.getItem("CPF");
+  const GetData = localStorage.getItem("Data-Nascimento");
 
-  if({NameInput.value = "" && RgInput.value = "" && CpfInput.value= "" && DataInput.value= ""}){
-    return alert("Insira seus dados !")
+  if (GetName === "" || GetRg === "" || GetCpf === "" || GetData === "") {
+    alert("Preencha todos os campos obrigatórios.");
+    return;
   }
-  if (items == false) {
-  } else {
-    window.location.href = "../especialidades_User/especialidades.html";
-  }
+
+  console.log(GetName);
+
+  window.location.href = "../especialidades_User/especialidades.html";
 });
-
 
 
 function toggleMenu() {
