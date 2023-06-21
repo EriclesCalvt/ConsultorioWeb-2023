@@ -144,6 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       selectSexo.innerHTML = '';
+      const defaultOption = document.createElement('option')
+      defaultOption.value = 'Selecione:'
+      defaultOption.textContent = 'Selecione:'
+      selectSexo.appendChild(defaultOption)
+
       data.forEach(product => {
         const option = document.createElement('option');
         option.value = product.NomeProduct; // Defina a propriedade correta para o ID da conta
@@ -159,7 +164,19 @@ document.addEventListener('DOMContentLoaded', () => {
   selectSexo.addEventListener('change', () => {
     selectedProductId = selectSexo.value; // Atualiza o ID selecionado
 
-    if (selectedProductId) {
+    if (selectedProductId === 'Selecione:') {
+      // Caso "Selecione:" seja selecionado, limpa os valores dos inputs
+      inputNome.value = '';
+      inputRG.value = '';
+      inputCPF.value = '';
+      inputTelefone.value = '';
+      inputData.value = '';
+      inputCEP.value = '';
+      inputCidade.value = '';
+      inputBairro.value = '';
+      inputRua.value = '';
+      inputNumeroCasa.value = '';
+    } else {
       fetch(`http://localhost:3000/Products/${selectedProductId}`)
         .then(response => response.json())
         .then(product => {
@@ -182,17 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
           console.error('Erro ao obter os dados do produto:', error);
         });
-    } else {
-      inputNome.value = '';
-      inputRG.value = '';
-      inputCPF.value = '';
-      inputTelefone.value = '';
-      inputData.value = '';
-      inputCEP.value = '';
-      inputCidade.value = '';
-      inputBairro.value = '';
-      inputRua.value = '';
-      inputNumeroCasa.value = '';
     }
   });
 });
