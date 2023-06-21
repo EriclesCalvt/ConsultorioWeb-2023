@@ -202,3 +202,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.getElementById('footerWhatsapp').addEventListener('click', ()=> {
+  window.location.href = "https://wa.link/alopsy"
+})
+document.getElementById('footerFacebook').addEventListener('click', ()=> {
+  window.location.href = "https://www.facebook.com/profile.php?id=100090094286048"
+})
+document.getElementById('footerInstagram').addEventListener('click', ()=> {
+  window.location.href = "https://instagram.com/cmed.especialidades"
+})

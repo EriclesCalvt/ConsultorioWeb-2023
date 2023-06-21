@@ -323,6 +323,7 @@ footer {
 }
 footer img {
   height: 25vh;
+  cursor: pointer;
 }
 .feet {
   width: 100%;
