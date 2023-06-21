@@ -19,6 +19,22 @@ function toggleMenu() {
   }
 }
 
+const cpfInput = document.getElementById('cpf');
+cpfInput.addEventListener('input', () => {
+  let cpf = cpfInput.value.replace(/\D/g, ''); // remove todos os caracteres não-numéricos
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // adiciona ponto após os primeiros 3 dígitos
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // adiciona ponto após os segundos 3 dígitos
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // adiciona hífen após os últimos 2 dígitos
+  cpfInput.value = cpf;
+});
+
+const telefoneInput = document.getElementById('telefone');
+telefoneInput.addEventListener('input', () => {
+  let telefone = telefoneInput.value.replace(/\D/g, ''); // remove todos os caracteres não-numéricos
+  telefone = telefone.replace(/^(\d{2})(\d)/g, '($1) $2'); // adiciona parênteses e espaço após os primeiros 2 dígitos
+  telefone = telefone.replace(/(\d{4,5})(\d)/, '$1-$2'); // adiciona hífen após o quarto ou quinto dígito
+  telefoneInput.value = telefone;
+});
 
 
 let select = document.querySelector("#select");

@@ -203,6 +203,16 @@ function selectService(medData) {
   });
 }
 
+const cpfInput = document.getElementById('CpfInput');
+cpfInput.addEventListener('input', () => {
+  let cpf = cpfInput.value.replace(/\D/g, ''); // remove todos os caracteres não-numéricos
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // adiciona ponto após os primeiros 3 dígitos
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // adiciona ponto após os segundos 3 dígitos
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // adiciona hífen após os últimos 2 dígitos
+  cpfInput.value = cpf;
+});
+
+
 document.getElementById("updateServices").addEventListener("click", () => {
   window.location.href = "../Configuracao/alterarDados/index.html"
 })
@@ -216,6 +226,3 @@ document.getElementById('footerFacebook').addEventListener('click', ()=> {
 document.getElementById('footerInstagram').addEventListener('click', ()=> {
   window.location.href = "https://instagram.com/cmed.especialidades"
 })
-
-
-// validação de datas:
