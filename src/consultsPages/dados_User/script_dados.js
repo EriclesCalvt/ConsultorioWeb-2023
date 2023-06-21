@@ -13,7 +13,6 @@ document.querySelector("#CPF").addEventListener("click", () => {
 
 
 //tratamento de data:
-
 document.querySelector(".form-user").addEventListener("submit", (e) => {
   // adicionar o envio dos dados para o localStorage
   e.preventDefault();
@@ -46,11 +45,17 @@ document.querySelector(".form-user").addEventListener("submit", (e) => {
     DataInput: GetData,
   };
 
+  if({NameInput.value = "" && RgInput.value = "" && CpfInput.value= "" && DataInput.value= ""}){
+    return alert("Insira seus dados !")
+  }
   if (items == false) {
   } else {
     window.location.href = "../especialidades_User/especialidades.html";
   }
 });
+
+
+
 function toggleMenu() {
   var menu = document.getElementById("menu-lateral");
   menu.classList.toggle("mostrar");
