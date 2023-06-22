@@ -21,31 +21,60 @@ for (let i = 0; i < confirmationBtns.length; i++) {
   });
 }
 const confirmationButtons = document.querySelectorAll(".confirmation");
+const btnEnviar = document.getElementById("Enviar")
 
+let btn = false
 // Adicione um evento de clique (click) a cada botão
 confirmationButtons.forEach((button) => {
   button.addEventListener("click", () => {
     // Altere a cor de fundo do botão clicado
-    button.style.backgroundColor = "#19a9dd";
+    if(btn){
+      button.style.backgroundColor = "#629fb6";
+      btnEnviar.disabled = true 
+      btn = false
+    }else{
+      button.style.backgroundColor = "#19a9dd";
+      btnEnviar.disabled = false
+      btn = true
+    }
   });
 });
+
 document.querySelector("#form-date").addEventListener("submit", (e) => {
   e.preventDefault();
   const DataFormInput = document.getElementById("DateInput");
-  localStorage.setItem("Data-Consulta", DataFormInput.value);
-  GetDataForm = localStorage.getItem("Data-Consulta");
+  const selectedDate = DataFormInput.value;
+
+  if (!selectedDate) {
+    // Se nenhuma data for selecionada, exiba uma mensagem de erro ou tome alguma outra ação
+    alert("Por favor, selecione uma data.");
+    return;
+  }
+
+  localStorage.setItem("Data-Consulta", selectedDate);
   DataFormInput.value = "";
 
-  //Condicional:
-  const Consultas = {
-    DataFormInput: GetDataForm,
-  };
-
-  if (Consultas == false) {
-  } else {
-    window.location.href = "../confirmation_User/confirmation.html";
-  }
+  window.location.href = "../confirmation_User/confirmation.html";
 });
+
+
+// document.querySelector("#form-date").addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const DataFormInput = document.getElementById("DateInput");
+//   localStorage.setItem("Data-Consulta", DataFormInput.value);
+//   GetDataForm = localStorage.getItem("Data-Consulta");
+//   DataFormInput.value = "";
+
+//   //Condicional:
+//   const Consultas = {
+//     DataFormInput: GetDataForm,
+//   };
+
+//   if (Consultas == false) {
+//   } else {
+//     window.location.href = "../confirmation_User/confirmation.html";
+//   }
+// });
 function toggleMenu() {
   var menu = document.getElementById("menu-lateral");
   menu.classList.toggle("mostrar");
@@ -57,52 +86,6 @@ function toggleMenu() {
     menu.classList.remove("mostrar");
   }
 }
-
-
-// function pad(valor) {
-//   return valor.toString().padStart(2, '0');
-// }
-
-// function formata(data) {
-//   return `${data.getFullYear()}-${pad(data.getMonth() + 1)}-${pad(data.getDate())}`;
-// }
-
-// const campo = document.querySelector('#DateInput');
-
-// window.addEventListener('DOMContentLoaded', function() {
-//   const data = new Date(); // data de hoje
-//   campo.min = formata(data);
-//   campo.max = formata(data); // define a data máxima como o dia atual
-// });
-
-// campo.addEventListener('input', () => {
-//   campo.setCustomValidity('');
-//   campo.checkValidity();
-// });
-
-// campo.addEventListener('invalid', () => {
-//   const dataDiaDeHoje = new Date(); // data de hoje
-//   const dataSelecionada = new Date(campo.value); // data selecionada pelo usuário
-
-//   const anoDiaDeHoje = dataDiaDeHoje.getFullYear();
-//   const mesDiaDeHoje = dataDiaDeHoje.getMonth() + 1;
-//   const diaDiaDeHoje = dataDiaDeHoje.getDate();
-
-//   const anoSelecionado = dataSelecionada.getFullYear();
-//   const mesSelecionado = dataSelecionada.getMonth() + 1;
-//   const diaSelecionado = dataSelecionada.getDate();
-
-//   // let diff = anoSelecionado - anoDiaDeHoje;
-//   // if (mesSelecionado < mesDiaDeHoje || (mesSelecionado === mesDiaDeHoje && diaSelecionado < diaDiaDeHoje)) {
-//   //   diff--;
-//   // }
-
-//   // if (diff < 0) {
-//   //   campo.setCustomValidity('O ano inserido não é válido. Insira um ano igual ou posterior ao atual.');
-//   // } else {
-//   //   campo.setCustomValidity(`A data deve estar entre hoje e ${diff} anos à frente`);
-//   // }
-// });
 
 
 

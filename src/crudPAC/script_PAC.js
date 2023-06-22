@@ -3,7 +3,7 @@ const isAuthenticated = document.cookie
 .find((row) => row.startsWith("token.auth="))
 ?.split("=")[1];
 
-if (!isAuthenticated) window.location.replace("../../loginPage/index.html");
+if (!isAuthenticated) window.location.replace("../loginPage/index.html");
 
 
 
@@ -286,8 +286,3 @@ document.getElementById('footerFacebook').addEventListener('click', ()=> {
 document.getElementById('footerInstagram').addEventListener('click', ()=> {
   window.location.href = "https://instagram.com/cmed.especialidades"
 })
-
-// validação de datas:
-var dataInput = document.getElementById("dataNascimento");
-var dataAtual = new Date().toISOString().split("T")[0];
-dataInput.setAttribute("min", dataAtual)

@@ -80,8 +80,7 @@
 }
 #dynamicTables {
   display: flex;
-  margin-left: 30%;
-  margin-right: 30%;
+
   background-color: #333;
   color: white;
   min-width: 25vw;
@@ -92,9 +91,12 @@
 }
 #dynamicTables table th {
   background-color: #629fb6;
+  padding: 0 98px 0 20px;
+  overflow-y: hidden;
 }
 #dynamicTables table td {
   background-color: rgb(178, 162, 250);
+  padding: 0 98px 0 20px;
 }
 body {
   background-color: #edf8f7;
