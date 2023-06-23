@@ -25,7 +25,6 @@ async function handleSubmit(e) {
 
   // verificar se o login foi bem-sucedido ou não
   const data = await response.json();
-
   if (email == "ericlesprogrammer@gmail.com" && password == "14082005programmer") {
     var date = new Date();
   
